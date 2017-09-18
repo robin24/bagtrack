@@ -129,12 +129,6 @@ extension BagsTableViewController:NewBagDelegate {
 }
 
 extension BagsTableViewController:CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print("Entered monitored region.")
-    }
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("Exited monitored region.")
-    }
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         for index in 0 ..< bags.count {
             let bag = bags[index]

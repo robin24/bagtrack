@@ -8,16 +8,23 @@
 
 import UIKit
 import CoreLocation
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var dataModel:DataModel!
+    var manager:CLLocationManager!
+    var center:UNUserNotificationCenter!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        manager = CLLocationManager()
+        manager.delegate = self
+        center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound], completionHandler: { granted, error in})
         return true
     }
 
@@ -47,3 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: - CLLocationManagerDelegate
+
+extension AppDelegate:CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        guard region is CLBeaconRegion else {
+            return
+        }
+        let content = UNMutableNotificationContent()
+        content.title = "BagTrack"
+        content.body = "Oops, you might be about to loose your bag!"
+        content.sound = UNNotificationSound.default()
+        let request = UNNotificationRequest(identifier: "BagTrack", content: content, trigger: nil)
+        center.add(request, withCompletionHandler: nil)
+    }
+}
