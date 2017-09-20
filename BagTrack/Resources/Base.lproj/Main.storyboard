@@ -17,31 +17,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" textLabel="QXf-pE-lbc" detailTextLabel="Wcu-lk-0YD" style="IBUITableViewCellStyleSubtitle" id="cIe-Kn-0cx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="bagCell" id="cIe-Kn-0cx" customClass="BagCell" customModule="BagTrack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cIe-Kn-0cx" id="zLF-xb-Jlu">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QXf-pE-lbc">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZW-Ds-ZRa" userLabel="nameLabel">
+                                            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wcu-lk-0YD">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1er-g0-NyK" userLabel="proximityLabel">
+                                            <rect key="frame" x="42" y="0.0" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EZW-Ds-ZRa" firstAttribute="leading" secondItem="zLF-xb-Jlu" secondAttribute="leading" id="JrQ-pQ-QoC"/>
+                                        <constraint firstItem="EZW-Ds-ZRa" firstAttribute="trailing" secondItem="1er-g0-NyK" secondAttribute="leading" id="XdZ-OY-owQ"/>
+                                        <constraint firstItem="1er-g0-NyK" firstAttribute="top" secondItem="zLF-xb-Jlu" secondAttribute="top" id="alF-f0-hRH"/>
+                                        <constraint firstItem="EZW-Ds-ZRa" firstAttribute="top" secondItem="zLF-xb-Jlu" secondAttribute="top" id="pHO-Gj-M1h"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="EZW-Ds-ZRa" id="Yea-Ty-N8D"/>
+                                    <outlet property="proximityLabel" destination="1er-g0-NyK" id="mZB-wk-mAL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="0PC-6X-Ihe" id="Ne1-0W-wNd"/>
                             <outlet property="delegate" destination="0PC-6X-Ihe" id="8ab-at-I9M"/>

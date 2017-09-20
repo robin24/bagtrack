@@ -62,10 +62,10 @@ class BagsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bagCell", for: indexPath) as! BagCell
         let bag = bags[indexPath.row]
-        cell.textLabel!.text = bag.name
-        cell.detailTextLabel!.text = bag.proximityForDisplay()
+        cell.nameLabel.text = bag.name
+        cell.proximityLabel.text = bag.proximityForDisplay()
         return cell
     }
 
@@ -137,10 +137,10 @@ extension BagsTableViewController:CLLocationManagerDelegate {
                     print("Ranged beacon matches stored bag.")
                     bag.proximity = beacon.proximity
                     let indexPath = IndexPath(row: index, section: 0)
-                    guard let cell = tableView.cellForRow(at: indexPath) else {
+                    guard let cell = tableView.cellForRow(at: indexPath) as? BagCell else {
                         fatalError("No cell at requested IndexPath.")
                     }
-                    cell.detailTextLabel!.text = bag.proximityForDisplay()
+                    cell.proximityLabel.text = bag.proximityForDisplay()
                 }
             }
         }
