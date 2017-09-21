@@ -24,29 +24,56 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZW-Ds-ZRa" userLabel="nameLabel">
-                                            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1er-g0-NyK" userLabel="proximityLabel">
-                                            <rect key="frame" x="42" y="0.0" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-hu-VP5" userLabel="BagDetail">
+                                            <rect key="frame" x="0.0" y="0.0" width="42" height="41"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZW-Ds-ZRa" userLabel="nameLabel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1er-g0-NyK" userLabel="proximityLabel">
+                                                    <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="uOO-F6-VDW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-tY-mzG" userLabel="configureTracking">
+                                            <rect key="frame" x="0.0" y="41" width="375" height="31"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuI-Wx-rDS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJe-NT-tSh">
+                                                    <rect key="frame" x="326" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onTrackingSwitchToggled:" destination="cIe-Kn-0cx" eventType="valueChanged" id="h1i-Nl-oIe"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="EZW-Ds-ZRa" firstAttribute="leading" secondItem="zLF-xb-Jlu" secondAttribute="leading" id="JrQ-pQ-QoC"/>
-                                        <constraint firstItem="EZW-Ds-ZRa" firstAttribute="trailing" secondItem="1er-g0-NyK" secondAttribute="leading" id="XdZ-OY-owQ"/>
-                                        <constraint firstItem="1er-g0-NyK" firstAttribute="top" secondItem="zLF-xb-Jlu" secondAttribute="top" id="alF-f0-hRH"/>
-                                        <constraint firstItem="EZW-Ds-ZRa" firstAttribute="top" secondItem="zLF-xb-Jlu" secondAttribute="top" id="pHO-Gj-M1h"/>
+                                        <constraint firstItem="Sfw-hu-VP5" firstAttribute="top" secondItem="zLF-xb-Jlu" secondAttribute="top" id="AAj-a1-JO7"/>
+                                        <constraint firstItem="Sfw-hu-VP5" firstAttribute="leading" secondItem="zLF-xb-Jlu" secondAttribute="leading" id="FDe-Q8-GKS"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fdf-tY-mzG" secondAttribute="trailing" id="ery-HH-KZ1"/>
+                                        <constraint firstItem="Fdf-tY-mzG" firstAttribute="top" secondItem="Sfw-hu-VP5" secondAttribute="bottom" id="mZq-30-VPU"/>
+                                        <constraint firstItem="Fdf-tY-mzG" firstAttribute="leading" secondItem="zLF-xb-Jlu" secondAttribute="leading" id="u34-z5-FMi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="EZW-Ds-ZRa" id="Yea-Ty-N8D"/>
                                     <outlet property="proximityLabel" destination="1er-g0-NyK" id="mZB-wk-mAL"/>
+                                    <outlet property="trackingSwitch" destination="pJe-NT-tSh" id="2d8-L9-NTg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

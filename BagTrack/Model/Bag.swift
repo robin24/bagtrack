@@ -20,6 +20,7 @@ class Bag:Codable {
         case majorValue
         case minorValue
         case beaconID
+        case isTrackingEnabled
     }
 
     var name:String
@@ -31,6 +32,7 @@ class Bag:Codable {
         return CLBeaconRegion(proximityUUID: proximityUUID, major: majorValue, minor: minorValue, identifier: beaconID)
     }
     var proximity:CLProximity = .unknown
+    var isTrackingEnabled:Bool
 
     // MARK: - Methods
 
@@ -41,6 +43,7 @@ class Bag:Codable {
         self.minorValue = minorValue
         self.beaconID = beaconID
         self.proximity = .unknown
+        self.isTrackingEnabled = true
     }
     func proximityForDisplay() -> String {
         switch proximity {

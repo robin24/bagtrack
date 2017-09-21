@@ -64,10 +64,30 @@ class DataModel {
     func deleteBag(at index:Int) {
         bags.remove(at: index)
     }
-    func update(bag:Bag, proximity:CLProximity) {
+    func update(bag:Bag, name:String?, proximityUUID:UUID?, majorValue:CLBeaconMajorValue?, minorValue:CLBeaconMinorValue?, beaconID:String?, proximity:CLProximity?, isTrackingEnabled:Bool?) {
         for tempBag in bags {
             if tempBag.proximityUUID == bag.proximityUUID {
-                bag.proximity = tempBag.proximity
+                if name != nil {
+                    bag.name = tempBag.name
+                }
+                if proximityUUID != nil {
+                    bag.proximityUUID = tempBag.proximityUUID
+                }
+                if majorValue != nil {
+                    bag.majorValue = tempBag.majorValue
+                }
+                if minorValue != nil {
+                    bag.minorValue = tempBag.minorValue
+                }
+                if beaconID != nil {
+                    bag.beaconID = tempBag.beaconID
+                }
+                if proximity != nil {
+                    bag.proximity = tempBag.proximity
+                }
+                if isTrackingEnabled != nil {
+                    bag.isTrackingEnabled = tempBag.isTrackingEnabled
+                }
             }
         }
     }

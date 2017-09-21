@@ -30,7 +30,9 @@ class BagsTableViewController: UITableViewController {
         manager.requestAlwaysAuthorization()
         print("Starting monitoring and ranging for \(bags.count) bags.")
         for bag in bags {
-            startMonitoring(for: bag)
+            if bag.isTrackingEnabled {
+                startMonitoring(for: bag)
+            }
         }
 
     }
@@ -64,8 +66,7 @@ class BagsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bagCell", for: indexPath) as! BagCell
         let bag = bags[indexPath.row]
-        cell.nameLabel.text = bag.name
-        cell.proximityLabel.text = bag.proximityForDisplay()
+        cell.bag = bag
         return cell
     }
 
