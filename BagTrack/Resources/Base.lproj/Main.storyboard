@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,50 +25,51 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-hu-VP5" userLabel="BagDetail">
-                                            <rect key="frame" x="0.0" y="0.0" width="42" height="41"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="esV-2e-jrP">
+                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZW-Ds-ZRa" userLabel="nameLabel">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1er-g0-NyK" userLabel="proximityLabel">
-                                                    <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="uOO-F6-VDW"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-tY-mzG" userLabel="configureTracking">
-                                            <rect key="frame" x="0.0" y="41" width="375" height="31"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuI-Wx-rDS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="31"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJe-NT-tSh">
-                                                    <rect key="frame" x="326" y="0.0" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="onTrackingSwitchToggled:" destination="cIe-Kn-0cx" eventType="valueChanged" id="h1i-Nl-oIe"/>
-                                                    </connections>
-                                                </switch>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-hu-VP5" userLabel="BagDetail">
+                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="7"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZW-Ds-ZRa" userLabel="nameLabel">
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1er-g0-NyK" userLabel="proximityLabel">
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="7"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-tY-mzG" userLabel="configureTracking">
+                                                    <rect key="frame" x="0.0" y="7" width="167.5" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuI-Wx-rDS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="118.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJe-NT-tSh">
+                                                            <rect key="frame" x="118.5" y="0.0" width="51" height="20.5"/>
+                                                            <connections>
+                                                                <action selector="onTrackingSwitchToggled:" destination="cIe-Kn-0cx" eventType="valueChanged" id="h1i-Nl-oIe"/>
+                                                            </connections>
+                                                        </switch>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Sfw-hu-VP5" firstAttribute="top" secondItem="zLF-xb-Jlu" secondAttribute="top" id="AAj-a1-JO7"/>
-                                        <constraint firstItem="Sfw-hu-VP5" firstAttribute="leading" secondItem="zLF-xb-Jlu" secondAttribute="leading" id="FDe-Q8-GKS"/>
-                                        <constraint firstAttribute="trailing" secondItem="Fdf-tY-mzG" secondAttribute="trailing" id="ery-HH-KZ1"/>
-                                        <constraint firstItem="Fdf-tY-mzG" firstAttribute="top" secondItem="Sfw-hu-VP5" secondAttribute="bottom" id="mZq-30-VPU"/>
-                                        <constraint firstItem="Fdf-tY-mzG" firstAttribute="leading" secondItem="zLF-xb-Jlu" secondAttribute="leading" id="u34-z5-FMi"/>
+                                        <constraint firstItem="esV-2e-jrP" firstAttribute="top" secondItem="zLF-xb-Jlu" secondAttribute="topMargin" id="Iou-0A-vMg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="esV-2e-jrP" secondAttribute="bottom" id="RSU-Z6-qRK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="esV-2e-jrP" secondAttribute="trailing" id="moE-Nf-rle"/>
+                                        <constraint firstItem="esV-2e-jrP" firstAttribute="leading" secondItem="zLF-xb-Jlu" secondAttribute="leadingMargin" id="peH-Nh-AKi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
