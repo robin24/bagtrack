@@ -57,6 +57,11 @@ class Bag:Codable {
 
 // MARK: - Equality operator overloading
 
-func ==(bag:Bag, beacon:CLBeacon) -> Bool {
-    return bag.proximityUUID == beacon.proximityUUID && Int(bag.majorValue) == Int(beacon.major) && Int(bag.minorValue) == Int(beacon.minor)
+extension Bag:Equatable {
+    static func ==(lhs:Bag, rhs:Bag) -> Bool {
+        return lhs.name == rhs.name && lhs.proximityUUID == rhs.proximityUUID && lhs.majorValue == rhs.majorValue && lhs.minorValue == rhs.minorValue && lhs.beaconID == rhs.beaconID && lhs.region == rhs.region && lhs.proximity == rhs.proximity && lhs.isTrackingEnabled == rhs.isTrackingEnabled
+    }
+    static func ==(bag:Bag, beacon:CLBeacon) -> Bool {
+        return bag.proximityUUID == beacon.proximityUUID && Int(bag.majorValue) == Int(beacon.major) && Int(bag.minorValue) == Int(beacon.minor)
+    }
 }
