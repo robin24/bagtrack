@@ -66,7 +66,7 @@ class DataModel {
     }
     func update(bag:Bag, name:String?, proximityUUID:UUID?, majorValue:CLBeaconMajorValue?, minorValue:CLBeaconMinorValue?, beaconID:String?, proximity:CLProximity?, isTrackingEnabled:Bool?) {
         for tempBag in bags {
-            if tempBag.proximityUUID == bag.proximityUUID {
+            if tempBag == bag {
                 if let name = name {
                     bag.name = name
                 }
