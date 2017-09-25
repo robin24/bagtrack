@@ -67,26 +67,26 @@ class DataModel {
     func update(bag:Bag, name:String?, proximityUUID:UUID?, majorValue:CLBeaconMajorValue?, minorValue:CLBeaconMinorValue?, beaconID:String?, proximity:CLProximity?, isTrackingEnabled:Bool?) {
         for tempBag in bags {
             if tempBag.proximityUUID == bag.proximityUUID {
-                if name != nil {
-                    bag.name = tempBag.name
+                if let name = name {
+                    bag.name = name
                 }
-                if proximityUUID != nil {
-                    bag.proximityUUID = tempBag.proximityUUID
+                if let proximityUUID = proximityUUID {
+                    bag.proximityUUID = proximityUUID
                 }
-                if majorValue != nil {
-                    bag.majorValue = tempBag.majorValue
+                if let majorValue = majorValue {
+                    bag.majorValue = majorValue
                 }
-                if minorValue != nil {
-                    bag.minorValue = tempBag.minorValue
+                if let minorValue = minorValue {
+                    bag.minorValue = minorValue
                 }
-                if beaconID != nil {
-                    bag.beaconID = tempBag.beaconID
+                if let beaconID = beaconID {
+                    bag.beaconID = beaconID
                 }
-                if proximity != nil {
-                    bag.proximity = tempBag.proximity
+                if let proximity = proximity {
+                    bag.proximity = proximity
                 }
-                if isTrackingEnabled != nil {
-                    bag.isTrackingEnabled = tempBag.isTrackingEnabled
+                if let isTrackingEnabled = isTrackingEnabled {
+                    bag.isTrackingEnabled = isTrackingEnabled
                 }
             }
         }
