@@ -67,6 +67,7 @@ class BagsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bagCell", for: indexPath) as! BagCell
         let bag = bags[indexPath.row]
         cell.bag = bag
+        cell.delegate = self
         return cell
     }
 
@@ -120,6 +121,8 @@ class BagsTableViewController: UITableViewController {
 
 }
 
+// MARK: - NewBagDelegate
+
 extension BagsTableViewController:NewBagDelegate {
     func newBagController(_ controller: NewBagTableViewController, didFinishAdding bag: Bag) {
         dataModel.add(bag: bag)
@@ -128,6 +131,20 @@ extension BagsTableViewController:NewBagDelegate {
         tableView.reloadData()
     }
 }
+
+// MARK: - BagCellDelegate
+
+extension BagsTableViewController:BagCellDelegate {
+    func bagCell(_ cell: BagCell, didToggleTrackingFor bag: Bag) {
+        if bag.isTrackingEnabled {
+            stopMonitoring(for: bag)
+        } else {
+            startMonitoring(for: bag)
+        }
+        dataModel.update(bag: bag, name: nil, proximityUUID: nil, majorValue: nil, minorValue: nil, beaconID: nil, proximity: nil, isTrackingEnabled: !bag.isTrackingEnabled)
+    }
+}
+// MARK: - CLLocationManagerDelegate
 
 extension BagsTableViewController:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
