@@ -75,6 +75,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="EZW-Ds-ZRa" id="Yea-Ty-N8D"/>
                                     <outlet property="proximityLabel" destination="1er-g0-NyK" id="mZB-wk-mAL"/>
+                                    <outlet property="trackingLabel" destination="OuI-Wx-rDS" id="dBN-28-tYi"/>
                                     <outlet property="trackingSwitch" destination="pJe-NT-tSh" id="2d8-L9-NTg"/>
                                 </connections>
                             </tableViewCell>
