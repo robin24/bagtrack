@@ -37,10 +37,6 @@ class BagsTableViewController: UITableViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     func startMonitoring(for bag:Bag) {
         manager.startMonitoring(for: bag.region)
         print("Region monitoring started.")
@@ -75,6 +71,13 @@ class BagsTableViewController: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return true
     }
+    // Override to disable "swipe to delete" action unless in edit mode
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        if tableView.isEditing {
+            return .delete
+        }
+        return .none
+    }
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -84,25 +87,8 @@ class BagsTableViewController: UITableViewController {
             dataModel.deleteBag(at: indexPath.row)
             bags.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
@@ -138,10 +124,12 @@ extension BagsTableViewController:BagCellDelegate {
     func bagCell(_ cell: BagCell, didToggleTrackingFor bag: Bag) {
         if bag.isTrackingEnabled {
             stopMonitoring(for: bag)
+            cell.proximityLabel.text = bag.proximityForDisplay()
+            tableView.reloadData()
         } else {
             startMonitoring(for: bag)
         }
-        dataModel.update(bag: bag, name: nil, proximityUUID: nil, majorValue: nil, minorValue: nil, beaconID: nil, proximity: nil, isTrackingEnabled: !bag.isTrackingEnabled)
+        dataModel.update(bag: bag, name: nil, proximityUUID: nil, majorValue: nil, minorValue: nil, beaconID: nil, proximity: .unknown, isTrackingEnabled: !bag.isTrackingEnabled)
     }
 }
 // MARK: - CLLocationManagerDelegate

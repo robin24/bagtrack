@@ -46,6 +46,9 @@ class Bag:Codable {
         self.isTrackingEnabled = true
     }
     func proximityForDisplay() -> String {
+        if !isTrackingEnabled {
+            return "Tracking off"
+        }
         switch proximity {
         case .far: return "Far"
         case .immediate: return "Immediate"
