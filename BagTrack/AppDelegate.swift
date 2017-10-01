@@ -65,7 +65,7 @@ extension AppDelegate:CLLocationManagerDelegate {
         let content = UNMutableNotificationContent()
         content.title = "BagTrack"
         content.body = "Oops, you might be about to loose your bag!"
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound(named: "Alarm.wav")
         let request = UNNotificationRequest(identifier: "BagTrack", content: content, trigger: nil)
         center.add(request, withCompletionHandler: nil)
     }
