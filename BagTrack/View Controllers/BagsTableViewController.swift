@@ -128,6 +128,7 @@ extension BagsTableViewController:BagCellDelegate {
             tableView.reloadData()
         } else {
             startMonitoring(for: bag)
+            cell.proximityLabel.text = "Searching..."
         }
         dataModel.update(bag: bag, name: nil, proximityUUID: nil, majorValue: nil, minorValue: nil, beaconID: nil, proximity: .unknown, isTrackingEnabled: !bag.isTrackingEnabled)
     }
