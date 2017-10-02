@@ -21,12 +21,15 @@ class NewBagTableViewController: UITableViewController {
     @IBOutlet weak var majorField: UITextField!
     @IBOutlet weak var minorField: UITextField!
     @IBOutlet weak var identifierField: UITextField!
+    var textFields:[UITextField] = []
     weak var delegate:NewBagDelegate?
 
     // MARK: - Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFields = [nameField, uuidField, majorField, minorField, identifierField]
+        nameField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +39,7 @@ class NewBagTableViewController: UITableViewController {
     @IBAction func onCancelButtonTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    @IBAction func onSaveButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction func onSaveButtonTapped(_ sender: Any) {
         if !nameField.text!.isEmpty && !uuidField.text!.isEmpty && !majorField.text!.isEmpty && !minorField.text!.isEmpty && !identifierField.text!.isEmpty {
             guard let proximityUUID = UUID(uuidString: uuidField.text!) else {
                 showAlert()
@@ -78,4 +81,23 @@ class NewBagTableViewController: UITableViewController {
     }
     */
 
+}
+
+// MARK: - UITextFieldDelegate
+
+extension NewBagTableViewController:UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        for (index, field) in textFields.enumerated() {
+            if field == textField {
+                field.resignFirstResponder()
+                if index + 1 < textFields.count {
+                    let nextField = textFields[index + 1]
+                    nextField.becomeFirstResponder()
+                    return true
+                }
+            }
+        }
+        onSaveButtonTapped(textField)
+        return true
+    }
 }
