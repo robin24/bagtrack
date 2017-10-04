@@ -1,5 +1,5 @@
 //
-//  NewBagTableViewController.swift
+//  BagDetailTableViewController.swift
 //  BagTrack
 //
 //  Created by Robin Kipp on 14.09.17.
@@ -9,10 +9,10 @@
 import UIKit
 import CoreLocation
 
-protocol NewBagDelegate:class {
-    func newBagController(_ controller: NewBagTableViewController, didFinishAdding bag:Bag)
+protocol BagDetailDelegate:class {
+    func bagDetailController(_ controller: BagDetailTableViewController, didFinishAdding bag:Bag)
 }
-class NewBagTableViewController: UITableViewController {
+class BagDetailTableViewController: UITableViewController {
 
     // MARK: - Properties
 
@@ -22,7 +22,7 @@ class NewBagTableViewController: UITableViewController {
     @IBOutlet weak var minorField: UITextField!
     @IBOutlet weak var identifierField: UITextField!
     var textFields:[UITextField] = []
-    weak var delegate:NewBagDelegate?
+    weak var delegate:BagDetailDelegate?
 
     // MARK: - Methods
 
@@ -56,7 +56,7 @@ class NewBagTableViewController: UITableViewController {
             }
             let minorValue = CLBeaconMinorValue(minorInt)
             let bag = Bag(name: nameField.text!, proximityUUID: proximityUUID, majorValue: majorValue, minorValue: minorValue, beaconID: identifierField.text!)
-            delegate?.newBagController(self, didFinishAdding: bag)
+            delegate?.bagDetailController(self, didFinishAdding: bag)
             dismiss(animated: true, completion: nil)
 
         }
@@ -85,7 +85,7 @@ class NewBagTableViewController: UITableViewController {
 
 // MARK: - UITextFieldDelegate
 
-extension NewBagTableViewController:UITextFieldDelegate {
+extension BagDetailTableViewController:UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         for (index, field) in textFields.enumerated() {
             if field == textField {

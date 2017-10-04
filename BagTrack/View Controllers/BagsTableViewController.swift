@@ -99,7 +99,7 @@ class BagsTableViewController: UITableViewController {
         guard let navController = segue.destination as? UINavigationController else {
             fatalError("Error: segue to unexpected view controller.")
         }
-        guard let controller = navController.topViewController as? NewBagTableViewController else {
+        guard let controller = navController.topViewController as? BagDetailTableViewController else {
             fatalError("Error: navigation controller contains unexpected top view controller.")
         }
         controller.delegate = self
@@ -109,8 +109,8 @@ class BagsTableViewController: UITableViewController {
 
 // MARK: - NewBagDelegate
 
-extension BagsTableViewController:NewBagDelegate {
-    func newBagController(_ controller: NewBagTableViewController, didFinishAdding bag: Bag) {
+extension BagsTableViewController:BagDetailDelegate {
+    func bagDetailController(_ controller: BagDetailTableViewController, didFinishAdding bag: Bag) {
         dataModel.add(bag: bag)
         startMonitoring(for: bag)
         bags.append(bag)
