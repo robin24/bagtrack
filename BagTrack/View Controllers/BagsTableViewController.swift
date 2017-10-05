@@ -49,6 +49,10 @@ class BagsTableViewController: UITableViewController {
         manager.stopRangingBeacons(in: bag.region)
         print("Beacon ranging stopped.")
     }
+    @IBAction func onAddButtonTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "addBag", sender: nil)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

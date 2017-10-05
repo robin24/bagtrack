@@ -89,10 +89,13 @@
                     <navigationItem key="navigationItem" title="My Bags" id="YaH-PI-ogq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vex-5d-Ory">
                             <connections>
-                                <segue destination="0aQ-Xg-ETm" kind="presentation" id="Bhw-xO-FIE"/>
+                                <action selector="onAddButtonTapped:" destination="0PC-6X-Ihe" id="bD2-id-bGh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="0aQ-Xg-ETm" kind="presentation" identifier="addBag" id="UYy-9V-iHm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpx-Mt-7GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
