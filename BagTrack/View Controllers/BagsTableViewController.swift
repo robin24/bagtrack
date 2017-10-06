@@ -132,7 +132,7 @@ extension BagsTableViewController:BagCellDelegate {
             tableView.reloadData()
         } else {
             startMonitoring(for: bag)
-            cell.proximityLabel.text = "Searching..."
+            cell.proximityLabel.text = NSLocalizedString("Searching...", comment: "Searching after tracking is enabled.")
         }
         dataModel.update(bag: bag, name: nil, proximityUUID: nil, majorValue: nil, minorValue: nil, beaconID: nil, proximity: .unknown, isTrackingEnabled: !bag.isTrackingEnabled)
     }

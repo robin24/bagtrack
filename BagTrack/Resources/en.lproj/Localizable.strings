@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  BagTrack
+
+  Created by Robin Kipp on 06.10.17.
+  Copyright © 2017 Robin Kipp. All rights reserved.
+*/
+/* Accessibility action to disable tracking. */
+"Disable Tracking" = "Disable Tracking";
+
+/* Searching after tracking is enabled. */
+"Searching..." = "Searching...";
+
+/* Accessibility action to enable tracking. */
+"Enable Tracking" = "Enable Tracking";
+
+/* Shown when tracked bag is at far distance. */
+"Far" = "Far";
+
+/* Shown when the tracked bag is within immediate range. */
+"Immediate" = "Immediate";
+
+/* Shown when tracked bag is nearby. */
+"Near" = "Near";
+
+/* Shown when tracking is disabled. */
+"Tracking off" = "Tracking off";
+
+/* Returned when proximity of tracked bag cannot be determined. */
+"Unknown" = "Unknown";

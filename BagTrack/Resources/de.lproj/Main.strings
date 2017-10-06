@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1er-g0-NyK"; */
+"1er-g0-NyK.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "1u8-mJ-Mw5"; */
+"1u8-mJ-Mw5.placeholder" = "Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EZW-Ds-ZRa"; */
+"EZW-Ds-ZRa.text" = "Label";
+
+/* Class = "UILabel"; text = "Enable tracking"; ObjectID = "OuI-Wx-rDS"; */
+"OuI-Wx-rDS.text" = "Tracking aktivieren";
+
+/* Class = "UITextField"; placeholder = "Identifier"; ObjectID = "PCn-YX-h6d"; */
+"PCn-YX-h6d.placeholder" = "Identifier";
+
+/* Class = "UINavigationItem"; title = "Add Bag"; ObjectID = "TvI-0I-yiO"; */
+"TvI-0I-yiO.title" = "Tasche Hinzufügen";
+
+/* Class = "UINavigationItem"; title = "My Bags"; ObjectID = "YaH-PI-ogq"; */
+"YaH-PI-ogq.title" = "Meine Taschen";
+
+/* Class = "UITextField"; placeholder = "Minor"; ObjectID = "cHF-eb-vV7"; */
+"cHF-eb-vV7.placeholder" = "Minor";
+
+/* Class = "UITextField"; placeholder = "Major"; ObjectID = "fLa-1q-9mf"; */
+"fLa-1q-9mf.placeholder" = "Major";
+
+/* Class = "UITextField"; placeholder = "UUID"; ObjectID = "pCc-Qk-jFa"; */
+"pCc-Qk-jFa.placeholder" = "UUID";

@@ -47,13 +47,13 @@ class Bag:Codable {
     }
     func proximityForDisplay() -> String {
         if !isTrackingEnabled {
-            return "Tracking off"
+            return NSLocalizedString("Tracking off", comment: "Shown when tracking is disabled.")
         }
         switch proximity {
-        case .far: return "Far"
-        case .immediate: return "Immediate"
-        case .near: return "Near"
-        case .unknown: return "Unknown"
+        case .far: return NSLocalizedString("Far", comment: "Shown when tracked bag is at far distance.")
+        case .immediate: return NSLocalizedString("Immediate", comment: "Shown when the tracked bag is within immediate range.")
+        case .near: return NSLocalizedString("Near", comment: "Shown when tracked bag is nearby.")
+        case .unknown: return NSLocalizedString("Unknown", comment: "Returned when proximity of tracked bag cannot be determined.")
         }
     }
 }

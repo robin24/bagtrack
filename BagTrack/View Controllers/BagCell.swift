@@ -45,10 +45,10 @@ class BagCell: UITableViewCell {
         trackingSwitch.isAccessibilityElement = false
         trackingLabel.isAccessibilityElement = false
         if trackingSwitch.isOn {
-            let action = UIAccessibilityCustomAction(name: "Disable Tracking", target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
+            let action = UIAccessibilityCustomAction(name: NSLocalizedString("Disable Tracking", comment: "Accessibility action to disable tracking."), target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
             self.accessibilityCustomActions = [action]
         } else {
-            let action = UIAccessibilityCustomAction(name: "Enable Tracking", target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
+            let action = UIAccessibilityCustomAction(name: NSLocalizedString("Enable Tracking", comment: "Accessibility action to enable tracking."), target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
             self.accessibilityCustomActions = [action]
         }
 
@@ -60,10 +60,10 @@ class BagCell: UITableViewCell {
         trackingSwitch.isOn = !trackingSwitch.isOn
         delegate?.bagCell(self, didToggleTrackingFor: bag)
         if trackingSwitch.isOn {
-            let action = UIAccessibilityCustomAction(name: "Disable Tracking", target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
+            let action = UIAccessibilityCustomAction(name: NSLocalizedString("Disable Tracking", comment: "Accessibility action to disable tracking."), target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
             self.accessibilityCustomActions = [action]
         } else {
-            let action = UIAccessibilityCustomAction(name: "Enable Tracking", target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
+            let action = UIAccessibilityCustomAction(name: NSLocalizedString("Enable Tracking", comment: "Accessibility action to enable tracking."), target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
             self.accessibilityCustomActions = [action]
         }
     }
