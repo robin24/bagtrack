@@ -91,6 +91,10 @@ class DataModel {
             }
         }
     }
+    func replace(index:Int, with bag:Bag) {
+        bags.remove(at: index)
+        bags.insert(bag, at: index)
+    }
     private func getFilePath() -> URL {
         let homeDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let filePath = homeDir[0].appendingPathComponent("Bags.plist", isDirectory: false)

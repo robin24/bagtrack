@@ -11,6 +11,7 @@ import CoreLocation
 
 protocol BagDetailDelegate:class {
     func bagDetailController(_ controller: BagDetailTableViewController, didFinishAdding bag:Bag)
+    func bagDetailController(_ controller:BagDetailTableViewController, didFinishEditing bag:Bag, at indexPath:IndexPath)
 }
 class BagDetailTableViewController: UITableViewController {
 
@@ -21,6 +22,8 @@ class BagDetailTableViewController: UITableViewController {
     @IBOutlet weak var majorField: UITextField!
     @IBOutlet weak var minorField: UITextField!
     @IBOutlet weak var identifierField: UITextField!
+    var bag:Bag!
+    var indexPath:IndexPath?
     var textFields:[UITextField] = []
     weak var delegate:BagDetailDelegate?
 
@@ -28,6 +31,13 @@ class BagDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let bag = bag {
+            nameField.text = bag.name
+            uuidField.text = bag.proximityUUID.uuidString
+            majorField.text = String(bag.majorValue)
+            minorField.text = String(bag.minorValue)
+            identifierField.text = bag.beaconID
+        }
         textFields = [nameField, uuidField, majorField, minorField, identifierField]
         nameField.becomeFirstResponder()
     }
@@ -55,10 +65,14 @@ class BagDetailTableViewController: UITableViewController {
                 return
             }
             let minorValue = CLBeaconMinorValue(minorInt)
-            let bag = Bag(name: nameField.text!, proximityUUID: proximityUUID, majorValue: majorValue, minorValue: minorValue, beaconID: identifierField.text!)
+            bag = Bag(name: nameField.text!, proximityUUID: proximityUUID, majorValue: majorValue, minorValue: minorValue, beaconID: identifierField.text!)
+            if let indexPath = indexPath {
+                delegate?.bagDetailController(self, didFinishEditing: bag, at: indexPath)
+                dismiss(animated: true, completion: nil)
+                return
+            }
             delegate?.bagDetailController(self, didFinishAdding: bag)
             dismiss(animated: true, completion: nil)
-
         }
     }
     func showAlert() {

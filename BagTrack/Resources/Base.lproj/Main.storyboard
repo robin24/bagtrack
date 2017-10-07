@@ -95,6 +95,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="0aQ-Xg-ETm" kind="presentation" identifier="addBag" id="UYy-9V-iHm"/>
+                        <segue destination="0aQ-Xg-ETm" kind="presentation" identifier="editBag" id="ETk-Jr-kgT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpx-Mt-7GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,4 +297,7 @@
             <point key="canvasLocation" x="472" y="1284.5577211394304"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ETk-Jr-kgT"/>
+    </inferredMetricsTieBreakers>
 </document>

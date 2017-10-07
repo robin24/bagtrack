@@ -83,6 +83,9 @@ class BagsTableViewController: UITableViewController {
         return .none
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "editBag", sender: indexPath)
+    }
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -107,6 +110,12 @@ class BagsTableViewController: UITableViewController {
             fatalError("Error: navigation controller contains unexpected top view controller.")
         }
         controller.delegate = self
+        if segue.identifier == "editBag" {
+            controller.title = NSLocalizedString("Edit Bag", comment: "Window title shown when editing a bag.")
+            let indexPath = sender as! IndexPath
+            controller.bag = bags[indexPath.row]
+            controller.indexPath = indexPath
+        }
     }
 
 }
@@ -119,6 +128,14 @@ extension BagsTableViewController:BagDetailDelegate {
         startMonitoring(for: bag)
         bags.append(bag)
         tableView.reloadData()
+    }
+    func bagDetailController(_ controller: BagDetailTableViewController, didFinishEditing bag: Bag, at indexPath: IndexPath) {
+        dataModel.replace(index: indexPath.row, with: bag)
+        bags.remove(at: indexPath.row)
+        bags.insert(bag, at: indexPath.row)
+        let cell = tableView.cellForRow(at: indexPath) as! BagCell
+        cell.bag = bag
+        cell.configureCell(for: bag)
     }
 }
 
