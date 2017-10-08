@@ -14,7 +14,6 @@ class BagsTableViewController: UITableViewController {
     // MARK: - Properties
 
     var dataModel:DataModel!
-    var bags:[Bag] = []
     var manager:CLLocationManager!
 
     // MARK: - Methods
@@ -23,13 +22,10 @@ class BagsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         dataModel = DataModel.sharedInstance
-        bags = dataModel.retrieveBags()
-        tableView.reloadData()
         manager = CLLocationManager()
         manager.delegate = self
         manager.requestAlwaysAuthorization()
-        print("Starting monitoring and ranging for \(bags.count) bags.")
-        for bag in bags {
+        for bag in dataModel.bags {
             if bag.isTrackingEnabled {
                 startMonitoring(for: bag)
             }
@@ -52,7 +48,7 @@ class BagsTableViewController: UITableViewController {
     @IBAction func onAddButtonTapped(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "addBag", sender: nil)
     }
-    
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,12 +56,12 @@ class BagsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bags.count
+        return dataModel.bags.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bagCell", for: indexPath) as! BagCell
-        let bag = bags[indexPath.row]
+        let bag = dataModel.bags[indexPath.row]
         cell.bag = bag
         cell.delegate = self
         return cell
@@ -89,10 +85,9 @@ class BagsTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let bag = bags[indexPath.row]
+            let bag = dataModel.bags[indexPath.row]
             stopMonitoring(for: bag)
-            dataModel.deleteBag(at: indexPath.row)
-            bags.remove(at: indexPath.row)
+            dataModel.bags.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -113,7 +108,7 @@ class BagsTableViewController: UITableViewController {
         if segue.identifier == "editBag" {
             controller.title = NSLocalizedString("Edit Bag", comment: "Window title shown when editing a bag.")
             let indexPath = sender as! IndexPath
-            controller.bag = bags[indexPath.row]
+            controller.bag = dataModel.bags[indexPath.row]
             controller.indexPath = indexPath
         }
     }
@@ -124,15 +119,16 @@ class BagsTableViewController: UITableViewController {
 
 extension BagsTableViewController:BagDetailDelegate {
     func bagDetailController(_ controller: BagDetailTableViewController, didFinishAdding bag: Bag) {
-        dataModel.add(bag: bag)
+        dataModel.bags.append(bag)
         startMonitoring(for: bag)
-        bags.append(bag)
-        tableView.reloadData()
+        let indexPath = IndexPath(row: dataModel.bags.count - 1, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
     }
     func bagDetailController(_ controller: BagDetailTableViewController, didFinishEditing bag: Bag, at indexPath: IndexPath) {
-        dataModel.replace(index: indexPath.row, with: bag)
-        bags.remove(at: indexPath.row)
-        bags.insert(bag, at: indexPath.row)
+        dataModel.bags.remove(at: indexPath.row)
+        dataModel.bags.insert(bag, at: indexPath.row)
         let cell = tableView.cellForRow(at: indexPath) as! BagCell
         cell.bag = bag
         cell.configureCell(for: bag)
@@ -145,21 +141,22 @@ extension BagsTableViewController:BagCellDelegate {
     func bagCell(_ cell: BagCell, didToggleTrackingFor bag: Bag) {
         if bag.isTrackingEnabled {
             stopMonitoring(for: bag)
+            bag.isTrackingEnabled = false
+            bag.proximity = .unknown
             cell.proximityLabel.text = bag.proximityForDisplay()
-            tableView.reloadData()
         } else {
+            bag.isTrackingEnabled = true
             startMonitoring(for: bag)
             cell.proximityLabel.text = NSLocalizedString("Searching...", comment: "Searching after tracking is enabled.")
         }
-        dataModel.update(bag: bag, name: nil, proximityUUID: nil, majorValue: nil, minorValue: nil, beaconID: nil, proximity: .unknown, isTrackingEnabled: !bag.isTrackingEnabled)
     }
 }
 // MARK: - CLLocationManagerDelegate
 
 extension BagsTableViewController:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        for index in 0 ..< bags.count {
-            let bag = bags[index]
+        for index in 0 ..< dataModel.bags.count {
+            let bag = dataModel.bags[index]
             for beacon in beacons {
                 if bag == beacon {
                     print("Ranged beacon matches stored bag.")

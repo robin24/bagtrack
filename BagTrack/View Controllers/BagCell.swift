@@ -51,7 +51,6 @@ class BagCell: UITableViewCell {
             let action = UIAccessibilityCustomAction(name: NSLocalizedString("Enable Tracking", comment: "Accessibility action to enable tracking."), target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
             self.accessibilityCustomActions = [action]
         }
-
     }
     @IBAction func onTrackingSwitchToggled(_ sender: Any) {
         delegate?.bagCell(self, didToggleTrackingFor: bag)
