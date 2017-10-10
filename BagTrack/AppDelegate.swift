@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager = CLLocationManager()
         manager.delegate = self
         center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound], completionHandler: { granted, error in})
+        showPermissionAlerts()
         return true
     }
 
@@ -46,12 +46,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        showPermissionAlerts()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func showPermissionAlerts() {
+        if CLLocationManager.authorizationStatus() != .authorizedAlways {
+            if let navController = window?.rootViewController as? UINavigationController {
+                guard let viewController = navController.topViewController as? BagsTableViewController else {
+                    return
+                }
+                viewController.present(Helpers.showAlert(.noLocationPermission, error: nil), animated: true, completion: nil)
+            }
+            return
+        }
+        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            if !granted {
+                if let navController = self.window?.rootViewController as? UINavigationController {
+                    guard let viewController = navController.topViewController as? BagsTableViewController else {
+                        return
+                    }
+                    viewController.present(Helpers.showAlert(.noPushPermission, error: nil), animated: true, completion: nil)
+                }
+                return
+            }}
+    }
 
 }
 
