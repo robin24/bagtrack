@@ -22,6 +22,7 @@ class BagDetailTableViewController: UITableViewController {
     @IBOutlet weak var majorField: UITextField!
     @IBOutlet weak var minorField: UITextField!
     @IBOutlet weak var identifierField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     var bag:Bag!
     var indexPath:IndexPath?
     var textFields:[UITextField] = []
@@ -52,16 +53,16 @@ class BagDetailTableViewController: UITableViewController {
     @IBAction func onSaveButtonTapped(_ sender: Any) {
         if !nameField.text!.isEmpty && !uuidField.text!.isEmpty && !majorField.text!.isEmpty && !minorField.text!.isEmpty && !identifierField.text!.isEmpty {
             guard let proximityUUID = UUID(uuidString: uuidField.text!) else {
-                showAlert()
+                present(Helpers.showAlert(.invalidData, error: nil), animated: true, completion: nil)
                 return
             }
             guard let majorInt = Int(majorField.text!) else {
-                showAlert()
+                present(Helpers.showAlert(.invalidData, error: nil), animated: true, completion: nil)
                 return
             }
             let majorValue = CLBeaconMajorValue(majorInt)
             guard let minorInt = Int(minorField.text!) else {
-                showAlert()
+                present(Helpers.showAlert(.invalidData, error: nil), animated: true, completion: nil)
                 return
             }
             let minorValue = CLBeaconMinorValue(minorInt)
@@ -74,14 +75,6 @@ class BagDetailTableViewController: UITableViewController {
             delegate?.bagDetailController(self, didFinishAdding: bag)
             dismiss(animated: true, completion: nil)
         }
-    }
-    func showAlert() {
-        let controller = UIAlertController(title: "Invalid Data",
-                                           message: "The information you provided is invalid.",
-                                           preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        controller.addAction(action)
-        present(controller, animated: true, completion: nil)
     }
 
 
@@ -112,6 +105,12 @@ extension BagDetailTableViewController:UITextFieldDelegate {
             }
         }
         onSaveButtonTapped(textField)
+        return true
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if !nameField.text!.isEmpty && !uuidField.text!.isEmpty && !majorField.text!.isEmpty && !minorField.text!.isEmpty && !identifierField.text!.isEmpty {
+            saveButton.isEnabled = true
+        }
         return true
     }
 }

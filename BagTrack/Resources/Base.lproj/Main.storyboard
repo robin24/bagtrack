@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8e-HM-4x0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8e-HM-4x0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -260,7 +260,7 @@
                                 <action selector="onCancelButtonTapped:" destination="kcx-6H-oYp" id="hxN-Qh-uPg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="51X-fS-j7K">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="51X-fS-j7K">
                             <connections>
                                 <action selector="onSaveButtonTapped:" destination="kcx-6H-oYp" id="XGf-d4-kKn"/>
                             </connections>
@@ -271,6 +271,7 @@
                         <outlet property="majorField" destination="fLa-1q-9mf" id="GzN-GB-vaB"/>
                         <outlet property="minorField" destination="cHF-eb-vV7" id="wLu-r8-qyj"/>
                         <outlet property="nameField" destination="1u8-mJ-Mw5" id="YK9-x3-wg8"/>
+                        <outlet property="saveButton" destination="51X-fS-j7K" id="GgX-Gd-w8o"/>
                         <outlet property="uuidField" destination="pCc-Qk-jFa" id="BHM-F8-ize"/>
                     </connections>
                 </tableViewController>
@@ -298,6 +299,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ETk-Jr-kgT"/>
+        <segue reference="UYy-9V-iHm"/>
     </inferredMetricsTieBreakers>
 </document>
