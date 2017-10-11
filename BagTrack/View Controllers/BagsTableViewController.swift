@@ -170,4 +170,13 @@ extension BagsTableViewController:CLLocationManagerDelegate {
             }
         }
     }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        present(Helpers.showAlert(.locationError, error: error), animated: true, completion: nil)
+    }
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        present(Helpers.showAlert(.locationError, error: error), animated: true, completion: nil)
+    }
+    func locationManager(_ manager: CLLocationManager, rangingBeaconsDidFailFor region: CLBeaconRegion, withError error: Error) {
+        present(Helpers.showAlert(.locationError, error: error), animated: true, completion: nil)
+    }
 }
