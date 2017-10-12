@@ -13,6 +13,7 @@
 		002F31021F6B1856003E5133 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31011F6B1856003E5133 /* Bag.swift */; };
 		002F31041F6B2D3E003E5133 /* BagDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */; };
 		002F31061F6B3479003E5133 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31051F6B3479003E5133 /* DataModel.swift */; };
+		0045FC051F8FBF77002EEB15 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */; };
 		008A01651F87F051007A1E7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 008A01671F87F051007A1E7E /* Localizable.strings */; };
 		00AEE4CE1F6ADC6800B10697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE4CD1F6ADC6800B10697 /* AppDelegate.swift */; };
 		00AEE4D31F6ADC6900B10697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE4D11F6ADC6900B10697 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		002F31011F6B1856003E5133 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDetailTableViewController.swift; sourceTree = "<group>"; };
 		002F31051F6B3479003E5133 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		008A01661F87F051007A1E7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		008A01681F87F0BC007A1E7E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00AEE4CA1F6ADC6800B10697 /* BagTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				002F30FF1F6B166F003E5133 /* BagsTableViewController.swift */,
 				00EA38531F730E9A00CDA981 /* BagCell.swift */,
 				002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */,
+				0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				00EA38541F730E9A00CDA981 /* BagCell.swift in Sources */,
 				000463E01F8BD24600DF709F /* Helpers.swift in Sources */,
+				0045FC051F8FBF77002EEB15 /* OnboardingPager.swift in Sources */,
 				002F31061F6B3479003E5133 /* DataModel.swift in Sources */,
 				002F31001F6B166F003E5133 /* BagsTableViewController.swift in Sources */,
 				002F31041F6B2D3E003E5133 /* BagDetailTableViewController.swift in Sources */,

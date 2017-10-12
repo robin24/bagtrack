@@ -20,6 +20,7 @@ class BagsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        performSegue(withIdentifier: "onboardingSegue", sender: nil)
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         dataModel = DataModel.sharedInstance
         manager = CLLocationManager()
@@ -98,6 +99,9 @@ class BagsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "onboardingSegue" {
+            return
+        }
         guard let navController = segue.destination as? UINavigationController else {
             fatalError("Error: segue to unexpected view controller.")
         }
