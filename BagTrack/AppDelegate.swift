@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager = CLLocationManager()
         manager.delegate = self
         center = UNUserNotificationCenter.current()
-        showPermissionAlerts()
         return true
     }
 
@@ -65,13 +64,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         center.requestAuthorization(options: [.alert, .sound]) { granted, error in
             if !granted {
-                if let navController = self.window?.rootViewController as? UINavigationController {
-                    guard let viewController = navController.topViewController as? BagsTableViewController else {
-                        return
+                DispatchQueue.main.async {
+                    if let navController = self.window?.rootViewController as? UINavigationController {
+                        guard let viewController = navController.topViewController as? BagsTableViewController else {
+                            return
+                        }
+                        viewController.present(Helpers.showAlert(.noPushPermission, error: nil), animated: true, completion: nil)
                     }
-                    viewController.present(Helpers.showAlert(.noPushPermission, error: nil), animated: true, completion: nil)
                 }
-                return
             }}
     }
 
