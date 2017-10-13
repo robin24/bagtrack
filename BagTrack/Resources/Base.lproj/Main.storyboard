@@ -97,12 +97,12 @@
                     <connections>
                         <segue destination="0aQ-Xg-ETm" kind="presentation" identifier="addBag" id="UYy-9V-iHm"/>
                         <segue destination="0aQ-Xg-ETm" kind="presentation" identifier="editBag" id="ETk-Jr-kgT"/>
-                        <segue destination="fVN-t3-pX4" kind="presentation" identifier="onboardingSegue" id="hiw-uv-YFY"/>
+                        <segue destination="Knl-Rc-N2a" kind="presentation" identifier="onboardingSegue" id="hiw-uv-YFY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpx-Mt-7GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474.39999999999998" y="267.61619190404798"/>
+            <point key="canvasLocation" x="813.60000000000002" y="267.61619190404798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2N7-nY-a8D">
@@ -329,6 +329,7 @@ Explain what’s so great about BagTrack.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXt-kC-vFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
         </scene>
         <!--Onboarding-Tech-->
         <scene sceneID="M2p-6u-FeG">
@@ -361,7 +362,7 @@ Explain what’s so great about BagTrack.</string>
         <!--Onboarding-Location-->
         <scene sceneID="52n-GL-EiQ">
             <objects>
-                <viewController storyboardIdentifier="onboardingLocation" id="e7b-mN-0E7" userLabel="Onboarding-Location" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingLocation" id="e7b-mN-0E7" userLabel="Onboarding-Location" customClass="OnboardingLocationViewController" customModule="BagTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4q-EH-LRP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -377,6 +378,9 @@ Explain what’s so great about BagTrack.</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oST-ow-BVd">
                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="647"/>
                                         <state key="normal" title="Allow"/>
+                                        <connections>
+                                            <action selector="onAllowButtonTapped:" destination="e7b-mN-0E7" eventType="touchUpInside" id="tHb-cJ-DKK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -390,40 +394,40 @@ Explain what’s so great about BagTrack.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QW1-4k-OUr"/>
                     </view>
+                    <connections>
+                        <outlet property="allowButton" destination="oST-ow-BVd" id="cCu-k6-QB1"/>
+                        <outlet property="textView" destination="nwT-4j-LVu" id="XRP-j5-JgV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4q-aY-za2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
         </scene>
         <!--Onboarding-Push-->
         <scene sceneID="H7E-Go-0dB">
             <objects>
-                <viewController storyboardIdentifier="onboardingPush" id="ZmK-ot-sRn" userLabel="Onboarding-Push" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingPush" id="ZmK-ot-sRn" userLabel="Onboarding-Push" customClass="OnboardingPushViewController" customModule="BagTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ijb-yA-fJ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-sL-m2f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="0.0" height="647"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Enabling push notifications makes the user experience so much better!" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aj-9N-OXT">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aj-9N-OXT">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">When you enable push notifications, BagTrack will inform you when you get too far from your bags.
+Tap „Allow“ and confirm the following prompt to enable notifications (recommended), or tap „Next“ in order to skip this step.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-Nf-29k">
-                                        <rect key="frame" x="0.0" y="617" width="375" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voS-Yp-hc5">
-                                                <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
-                                                <state key="normal" title="Allow"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPd-Em-m9X">
-                                                <rect key="frame" x="143" y="0.0" width="232" height="30"/>
-                                                <state key="normal" title="Not Now"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKT-Rv-ODs">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="647"/>
+                                        <state key="normal" title="Allow"/>
+                                        <connections>
+                                            <action selector="onAllowButtonTapped:" destination="ZmK-ot-sRn" eventType="touchUpInside" id="OKe-dc-oIp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -436,9 +440,14 @@ Explain what’s so great about BagTrack.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cBC-YA-Msv"/>
                     </view>
+                    <connections>
+                        <outlet property="allowButton" destination="gKT-Rv-ODs" id="72L-Fp-hMz"/>
+                        <outlet property="textView" destination="8aj-9N-OXT" id="xX7-dH-iZm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="td5-Tk-aNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
         </scene>
         <!--Onboarding-Ready-->
         <scene sceneID="DJU-Q1-i9I">
@@ -448,40 +457,71 @@ Explain what’s so great about BagTrack.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e3w-Hl-KWR">
-                                <rect key="frame" x="0.0" y="20" width="0.0" height="647"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="All good things must come to an end..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhM-3q-0rQ">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RM-oH-KkF">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="647"/>
-                                        <state key="normal" title="Let's Go!"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="All good things must come to an end..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-wN-k3s">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="e3w-Hl-KWR" firstAttribute="leading" secondItem="tSC-lF-IIy" secondAttribute="leading" id="NDz-IL-GOJ"/>
-                            <constraint firstItem="tSC-lF-IIy" firstAttribute="bottom" secondItem="e3w-Hl-KWR" secondAttribute="bottom" id="Z6d-zZ-ZFM"/>
-                            <constraint firstItem="e3w-Hl-KWR" firstAttribute="top" secondItem="tSC-lF-IIy" secondAttribute="top" id="eLD-vt-qbN"/>
-                            <constraint firstItem="tSC-lF-IIy" firstAttribute="trailing" secondItem="e3w-Hl-KWR" secondAttribute="trailing" id="vdA-M7-hNh"/>
+                            <constraint firstItem="ewz-wN-k3s" firstAttribute="leading" secondItem="tSC-lF-IIy" secondAttribute="leading" id="OK0-JX-7xS"/>
+                            <constraint firstItem="ewz-wN-k3s" firstAttribute="top" secondItem="Abr-Fq-gg1" secondAttribute="topMargin" id="PVU-Fo-n5h"/>
+                            <constraint firstItem="ewz-wN-k3s" firstAttribute="trailing" secondItem="tSC-lF-IIy" secondAttribute="trailing" id="PcM-Va-mbK"/>
+                            <constraint firstItem="tSC-lF-IIy" firstAttribute="bottom" secondItem="ewz-wN-k3s" secondAttribute="bottom" id="pMd-wX-gg4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tSC-lF-IIy"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYR-PJ-64b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
         </scene>
         <!--Onboarding-Pager-->
         <scene sceneID="jpy-GJ-n7m">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fVN-t3-pX4" userLabel="Onboarding-Pager" customClass="OnboardingPager" customModule="BagTrack" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="onboardingPager" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fVN-t3-pX4" userLabel="Onboarding-Pager" customClass="OnboardingPager" customModule="BagTrack" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Getting Started" id="4X8-6y-wTh">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Back" id="fbh-X0-794">
+                            <connections>
+                                <action selector="onBackButtonTapped:" destination="fVN-t3-pX4" id="2qd-93-GZa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="oVP-LJ-lIk">
+                            <connections>
+                                <action selector="onNextButtonTapped:" destination="fVN-t3-pX4" id="6MY-WL-H0Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="fbh-X0-794" id="I32-WI-sfk"/>
+                        <outlet property="nextButton" destination="oVP-LJ-lIk" id="EKZ-Vl-pmV"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L9-hA-ITV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="709.60000000000002" y="107.49625187406298"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Uq-tY-Cn6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Knl-Rc-N2a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sr9-xt-9Ac">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fVN-t3-pX4" kind="relationship" relationship="rootViewController" id="3yn-HU-lwp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95a-jg-GoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235.19999999999999" y="98.950524737631198"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

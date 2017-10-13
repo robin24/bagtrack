@@ -12,9 +12,13 @@ class OnboardingPager: UIPageViewController {
 
     var controllers:[UIViewController] = []
     var counter = 0
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
+        UserDefaults.standard.set(true, forKey: "canContinue")
         controllers.append(storyboard!.instantiateViewController(withIdentifier: "onboardingWelcome"))
         controllers.append(storyboard!.instantiateViewController(withIdentifier: "onboardingTech"))
         controllers.append(storyboard!.instantiateViewController(withIdentifier: "onboardingLocation"))
@@ -27,24 +31,50 @@ class OnboardingPager: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func onBackButtonTapped(_ sender: UIBarButtonItem) {
+        counter -= 1
+        setViewControllers([controllers[counter]], direction: .reverse, animated: true, completion: nil)
+        UserDefaults.standard.set(true, forKey: "canContinue")
+        nextButton.title = "Next"
+        if counter == 0 {
+            backButton.isEnabled = false
+        }
+    }
+    @IBAction func onNextButtonTapped(_ sender: UIBarButtonItem) {
+        if !UserDefaults.standard.bool(forKey: "canContinue") {
+            present(Helpers.showAlert(.missingSteps, error: nil), animated: true, completion: nil)
+            return
+        }
+        if counter + 1 < controllers.count {
+            counter += 1
+            setViewControllers([controllers[counter]], direction: .forward, animated: true, completion: nil)
+            backButton.isEnabled = true
+            if counter + 1 == controllers.count {
+                nextButton.title = "Done"
+            }
+        } else {
+            UserDefaults.standard.set(true, forKey: "hasCompletedOnboarding")
+            UserDefaults.standard.removeObject(forKey: "canContinue")
+            dismiss(animated: true, completion: nil)
+        }
+    }
 
 }
 
 extension OnboardingPager:UIPageViewControllerDataSource {
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return controllers.count
-    }
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if counter >= 0 {
+        if counter > 0 {
             counter -= 1
+            UserDefaults.standard.set(true, forKey: "canContinue")
             return controllers[counter]
         }
         return nil
     }
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        if !UserDefaults.standard.bool(forKey: "canContinue") {
+            present(Helpers.showAlert(.missingSteps, error: nil), animated: true, completion: nil)
+            return nil
+        }
         if counter + 1 < controllers.count {
             counter += 1
             return controllers[counter]

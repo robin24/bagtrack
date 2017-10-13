@@ -10,7 +10,7 @@ import UIKit
 
 struct Helpers {
     enum alertTypes {
-        case invalidData, noLocationPermission, noPushPermission, locationError
+        case invalidData, noLocationPermission, noPushPermission, locationError, missingSteps
     }
     static func showAlert(_ type:alertTypes, error:Error?) -> UIAlertController {
         let titleString = "Error"
@@ -37,6 +37,7 @@ struct Helpers {
                 fatalError("Attempted to present location alert without providing an error")
             }
             alertString = NSLocalizedString("An error has occurred while monitoring location information. \(error.localizedDescription)", comment: "Error while monitoring location.")
+        case .missingSteps: alertString = NSLocalizedString("Please follow the on-screen instructions before continuing.", comment: "Shown when the user tries to proceed to the next onboarding screen without completing a necessary action.")
         }
         let alert = UIAlertController(title: titleString, message: alertString, preferredStyle: .alert)
         if hasSettingsAction {

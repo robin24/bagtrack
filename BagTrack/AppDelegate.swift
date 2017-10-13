@@ -53,6 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func showPermissionAlerts() {
+        if !UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
+            return
+        }
         if CLLocationManager.authorizationStatus() != .authorizedAlways {
             if let navController = window?.rootViewController as? UINavigationController {
                 guard let viewController = navController.topViewController as? BagsTableViewController else {

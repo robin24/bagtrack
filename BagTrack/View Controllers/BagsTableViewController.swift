@@ -20,12 +20,13 @@ class BagsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        performSegue(withIdentifier: "onboardingSegue", sender: nil)
+        if !UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
+            performSegue(withIdentifier: "onboardingSegue", sender: nil)
+        }
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         dataModel = DataModel.sharedInstance
         manager = CLLocationManager()
         manager.delegate = self
-        manager.requestAlwaysAuthorization()
         for bag in dataModel.bags {
             if bag.isTrackingEnabled {
                 startMonitoring(for: bag)
