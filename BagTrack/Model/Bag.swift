@@ -67,4 +67,8 @@ extension Bag:Equatable {
     static func ==(bag:Bag, beacon:CLBeacon) -> Bool {
         return bag.proximityUUID == beacon.proximityUUID && Int(bag.majorValue) == Int(beacon.major) && Int(bag.minorValue) == Int(beacon.minor)
     }
+    static func ==(bag:Bag, region:CLBeaconRegion) -> Bool {
+        return bag.proximityUUID == region.proximityUUID
+    }
+
 }
