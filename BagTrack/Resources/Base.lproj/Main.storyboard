@@ -382,7 +382,7 @@ In order to start tracking, you will need your iBeacon’s UUID, its major and m
                                         <string key="text">BagTrack utilizes location services for iBeacon tracking.
 
 Location services are only used in order to determine the proximity between you and your belongings, your geographic location will never be queried by this app.
-Please, tap the „Allow“ button below and choose „Always Allow“ in the following prompt in order to continue.</string>
+Please, tap the “Allow” button below and choose “Always Allow” in the following prompt in order to continue.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -429,7 +429,7 @@ Please, tap the „Allow“ button below and choose „Always Allow“ in the fo
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="403"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">When you enable push notifications, BagTrack will inform you when you get too far from your bags.
-Tap „Allow“ and confirm the following prompt to enable notifications (recommended), or tap „Next“ in order to skip this step.</string>
+Tap “Allow” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
