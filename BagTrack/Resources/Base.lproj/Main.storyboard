@@ -388,7 +388,7 @@ Please, tap the “Allow” button below and choose “Always Allow” in the fo
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oST-ow-BVd">
                                         <rect key="frame" x="0.0" y="475" width="375" height="172"/>
-                                        <state key="normal" title="Allow"/>
+                                        <state key="normal" title="Allow Location"/>
                                         <connections>
                                             <action selector="onAllowButtonTapped:" destination="e7b-mN-0E7" eventType="touchUpInside" id="tHb-cJ-DKK"/>
                                         </connections>
@@ -435,7 +435,7 @@ Tap “Allow” and confirm the following prompt to enable notifications (recomm
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKT-Rv-ODs">
                                         <rect key="frame" x="0.0" y="403" width="375" height="244"/>
-                                        <state key="normal" title="Allow"/>
+                                        <state key="normal" title="Allow Push Notifications"/>
                                         <connections>
                                             <action selector="onAllowButtonTapped:" destination="ZmK-ot-sRn" eventType="touchUpInside" id="OKe-dc-oIp"/>
                                         </connections>
