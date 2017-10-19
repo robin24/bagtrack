@@ -50,7 +50,7 @@ class OnboardingPushViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.async {
-                    self.textView.text = NSLocalizedString("Oops, something went wrong! We were unable to activate push notifications. Please tap \"Settings\" now to enable notifications, or tap \"Next\" if you prefer to do so later.", comment: "Shown when unable to activate notifications.")
+                    self.textView.text = NSLocalizedString("Oops, something went wrong! We were unable to activate push notifications. Please tap “Settings” now to enable notifications, or tap “Next” if you prefer to do so later.", comment: "Shown when unable to activate notifications.")
                     self.pushActivationFailed = true
                     self.allowButton.setTitle("Settings", for: .normal)
                 }
