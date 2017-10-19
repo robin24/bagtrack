@@ -65,7 +65,7 @@ extension Bag:Equatable {
         return lhs.name == rhs.name && lhs.proximityUUID == rhs.proximityUUID && lhs.majorValue == rhs.majorValue && lhs.minorValue == rhs.minorValue && lhs.beaconID == rhs.beaconID && lhs.region == rhs.region && lhs.proximity == rhs.proximity && lhs.isTrackingEnabled == rhs.isTrackingEnabled
     }
     static func ==(bag:Bag, beacon:CLBeacon) -> Bool {
-        return bag.proximityUUID == beacon.proximityUUID && Int(bag.majorValue) == Int(beacon.major) && Int(bag.minorValue) == Int(beacon.minor)
+        return bag.proximityUUID == beacon.proximityUUID && Int(bag.majorValue) == Int(truncating: beacon.major) && Int(bag.minorValue) == Int(truncating: beacon.minor)
     }
     static func ==(bag:Bag, region:CLBeaconRegion) -> Bool {
         return bag.proximityUUID == region.proximityUUID
