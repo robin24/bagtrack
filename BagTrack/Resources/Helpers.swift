@@ -26,7 +26,7 @@ struct Helpers {
         switch type {
         case .invalidData: alertString = NSLocalizedString("The data you provided is incorrect, please double-check and try again.", comment: "Invalid data error.")
         case .noLocationPermission:
-            alertString = NSLocalizedString("BagTrack needs to access your location in the background in order to function. Please tap on \"Settings\" and set \"Location\" to \"Always\".", comment: "Location access disabled.")
+            alertString = NSLocalizedString("BagTrack needs to access your location in the background in order to function. Please tap on “Settings” and set “Location” to “Always.”", comment: "Location access disabled.")
             hasOKAction = false
             hasSettingsAction = true
         case .noPushPermission:

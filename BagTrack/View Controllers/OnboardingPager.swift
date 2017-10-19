@@ -17,7 +17,6 @@ class OnboardingPager: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = self
         UserDefaults.standard.set(true, forKey: "canContinue")
         controllers.append(storyboard!.instantiateViewController(withIdentifier: "onboardingWelcome"))
         controllers.append(storyboard!.instantiateViewController(withIdentifier: "onboardingTech"))
@@ -59,26 +58,4 @@ class OnboardingPager: UIPageViewController {
         }
     }
 
-}
-
-extension OnboardingPager:UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if counter > 0 {
-            counter -= 1
-            UserDefaults.standard.set(true, forKey: "canContinue")
-            return controllers[counter]
-        }
-        return nil
-    }
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if !UserDefaults.standard.bool(forKey: "canContinue") {
-            present(Helpers.showAlert(.missingSteps, error: nil), animated: true, completion: nil)
-            return nil
-        }
-        if counter + 1 < controllers.count {
-            counter += 1
-            return controllers[counter]
-        }
-        return nil
-    }
 }
