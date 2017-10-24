@@ -102,7 +102,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpx-Mt-7GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="267.61619190404798"/>
+            <point key="canvasLocation" x="-1351" y="925"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2N7-nY-a8D">
@@ -120,7 +120,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZ7-Iw-7Bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="267.16641679160421"/>
+            <point key="canvasLocation" x="-1370" y="86"/>
         </scene>
         <!--Add Bag-->
         <scene sceneID="LrO-3K-yJh">
@@ -279,7 +279,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKM-4Q-S5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="925.18740629685169"/>
+            <point key="canvasLocation" x="700" y="1075"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yd1-Mr-isq">
@@ -297,7 +297,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSM-IF-Nus" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472" y="1284.5577211394304"/>
+            <point key="canvasLocation" x="-236" y="1075"/>
         </scene>
         <!--Onboarding-Welcome-->
         <scene sceneID="MYY-Xi-Ivw">
@@ -307,13 +307,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq2-tL-SUb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq2-tL-SUb">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Welcome the user.
+                                <string key="text">Welcome to BagTrack!
 
-Explain what’s so great about BagTrack.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+BagTrack utilizes iBeacon technology to keep track of your bags, luggage, and other belongings. An iBeacon and this app is all that’s required.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -329,7 +329,7 @@ Explain what’s so great about BagTrack.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXt-kC-vFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
+            <point key="canvasLocation" x="1806" y="-483"/>
         </scene>
         <!--Onboarding-Tech-->
         <scene sceneID="M2p-6u-FeG">
@@ -339,10 +339,15 @@ Explain what’s so great about BagTrack.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="A brief introduction to iBeacon technology" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-Jy-5gn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-Jy-5gn">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <mutableString key="text">iBeacons are small, portable devices that send out Bluetooth Low Energy signals at regular intervals.
+
+Carrying such a device in your bag will allow BagTrack to automatically monitor the distance between you and your bag, sending you a push notification whenever you might be about to leave your belongings behind.
+
+In order to start tracking, you will need your iBeacon’s UUID, its major and minor value, and its identifier. Please check your device’s manual or the manufacturer’s website in order to find this information.</mutableString>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -358,6 +363,7 @@ Explain what’s so great about BagTrack.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQO-r1-hzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-36" y="-666"/>
         </scene>
         <!--Onboarding-Location-->
         <scene sceneID="52n-GL-EiQ">
@@ -367,17 +373,23 @@ Explain what’s so great about BagTrack.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vq5-n0-BdU">
-                                <rect key="frame" x="0.0" y="20" width="0.0" height="647"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Vq5-n0-BdU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="BagTrack requires access to your location..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwT-4j-LVu">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwT-4j-LVu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="522.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <string key="text">BagTrack utilizes location services for iBeacon tracking.
+
+Location services are used only in order to determine the proximity between you and your belongings. Your geographic location will never be queried by this app.
+
+Please tap the “Allow Location” button below and choose “Always Allow” in the following prompt in order to continue.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oST-ow-BVd">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="647"/>
-                                        <state key="normal" title="Allow"/>
+                                        <rect key="frame" x="0.0" y="522.5" width="375" height="124.5"/>
+                                        <state key="normal" title="Allow Location"/>
                                         <connections>
                                             <action selector="onAllowButtonTapped:" destination="e7b-mN-0E7" eventType="touchUpInside" id="tHb-cJ-DKK"/>
                                         </connections>
@@ -401,7 +413,7 @@ Explain what’s so great about BagTrack.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4q-aY-za2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
+            <point key="canvasLocation" x="2073" y="173"/>
         </scene>
         <!--Onboarding-Push-->
         <scene sceneID="H7E-Go-0dB">
@@ -411,19 +423,21 @@ Explain what’s so great about BagTrack.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-sL-m2f">
-                                <rect key="frame" x="0.0" y="20" width="0.0" height="647"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-sL-m2f">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aj-9N-OXT">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aj-9N-OXT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="473.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">When you enable push notifications, BagTrack will inform you when you get too far from your bags.
-Tap „Allow“ and confirm the following prompt to enable notifications (recommended), or tap „Next“ in order to skip this step.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+
+Tap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKT-Rv-ODs">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="647"/>
-                                        <state key="normal" title="Allow"/>
+                                        <rect key="frame" x="0.0" y="473.5" width="375" height="173.5"/>
+                                        <state key="normal" title="Allow Push Notifications"/>
                                         <connections>
                                             <action selector="onAllowButtonTapped:" destination="ZmK-ot-sRn" eventType="touchUpInside" id="OKe-dc-oIp"/>
                                         </connections>
@@ -447,7 +461,7 @@ Tap „Allow“ and confirm the following prompt to enable notifications (recomm
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="td5-Tk-aNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
+            <point key="canvasLocation" x="2682" y="166"/>
         </scene>
         <!--Onboarding-Ready-->
         <scene sceneID="DJU-Q1-i9I">
@@ -457,10 +471,13 @@ Tap „Allow“ and confirm the following prompt to enable notifications (recomm
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="All good things must come to an end..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-wN-k3s">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="260" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-wN-k3s">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">Congratulations, you’re all set!
+
+We hope you enjoy using BagTrack.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -476,7 +493,7 @@ Tap „Allow“ and confirm the following prompt to enable notifications (recomm
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYR-PJ-64b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="106.59670164917542"/>
+            <point key="canvasLocation" x="1137" y="-484"/>
         </scene>
         <!--Onboarding-Pager-->
         <scene sceneID="jpy-GJ-n7m">
@@ -503,7 +520,7 @@ Tap „Allow“ and confirm the following prompt to enable notifications (recomm
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L9-hA-ITV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709.60000000000002" y="107.49625187406298"/>
+            <point key="canvasLocation" x="700" y="322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Uq-tY-Cn6">
@@ -521,7 +538,7 @@ Tap „Allow“ and confirm the following prompt to enable notifications (recomm
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95a-jg-GoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-235.19999999999999" y="98.950524737631198"/>
+            <point key="canvasLocation" x="-236" y="322"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

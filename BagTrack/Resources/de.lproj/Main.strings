@@ -5,6 +5,15 @@
 /* Class = "UITextField"; placeholder = "Name"; ObjectID = "1u8-mJ-Mw5"; */
 "1u8-mJ-Mw5.placeholder" = "Name";
 
+/* Class = "UINavigationItem"; title = "Getting Started"; ObjectID = "4X8-6y-wTh"; */
+"4X8-6y-wTh.title" = "Erste Schritte";
+
+/* Class = "UITextView"; text = "When you enable push notifications, BagTrack will inform you when you get too far from your bags.\n\nTap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step."; ObjectID = "8aj-9N-OXT"; */
+"8aj-9N-OXT.text" = "Wenn du Benachrichtigungen aktivierst informiert dich BagTrack, sobald du dich zu weit von deinen Taschen entfernst.\n\nTippe auf „Benachrichtigungen erlauben“ und bestätige die folgende Meldung, um Benachrichtigungen zu erhalten (empfohlen), oder tippe auf „Weiter“, um diesen Schritt zu überspringen.";
+
+/* Class = "UITextView"; text = "Welcome to BagTrack!\n\nBagTrack utilizes iBeacon technology to keep track of your bags, luggage, and other belongings. An iBeacon and this app is all that’s required."; ObjectID = "Cq2-tL-SUb"; */
+"Cq2-tL-SUb.text" = "Herzlich Willkommen!\n\nBagTrack verwendet iBeacon-Technologie, um deine Taschen, dein Gepäck oder andere Gegenstände im Auge zu behalten. Ein iBeacon und diese App ist alles, was du brauchst.";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "EZW-Ds-ZRa"; */
 "EZW-Ds-ZRa.text" = "Label";
 
@@ -23,8 +32,29 @@
 /* Class = "UITextField"; placeholder = "Minor"; ObjectID = "cHF-eb-vV7"; */
 "cHF-eb-vV7.placeholder" = "Minor";
 
+/* Class = "UITextView"; text = "Congratulations, you’re all set!\n\nWe hope you enjoy using BagTrack."; ObjectID = "ewz-wN-k3s"; */
+"ewz-wN-k3s.text" = "Glückwunsch, du bist startklar!\n\nWir hoffen, dass dir BagTrack gefällt.";
+
 /* Class = "UITextField"; placeholder = "Major"; ObjectID = "fLa-1q-9mf"; */
 "fLa-1q-9mf.placeholder" = "Major";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "fbh-X0-794"; */
+"fbh-X0-794.title" = "Zurück";
+
+/* Class = "UIButton"; normalTitle = "Allow Push Notifications"; ObjectID = "gKT-Rv-ODs"; */
+"gKT-Rv-ODs.normalTitle" = "Benachrichtigungen Erlauben";
+
+/* Class = "UITextView"; text = "iBeacons are small, portable devices that send out Bluetooth Low Energy signals at regular intervals.\n\nCarrying such a device in your bag will allow BagTrack to automatically monitor the distance between you and your bag, sending you a push notification whenever you might be about to leave your belongings behind.\n\nIn order to start tracking, you will need your iBeacon’s UUID, its major and minor value, and its identifier. Please check your device’s manual or the manufacturer’s website in order to find this information."; ObjectID = "ldg-Jy-5gn"; */
+"ldg-Jy-5gn.text" = "iBeacons sind kleine, portable Geräte, welche in regelmäßigen Intervallen Bluetooth Low Energy-Signale aussenden.\n\nEin solches Gerät in deiner Tasche ermöglicht es BagTrack, die Entfernung zwischen dir und deiner Tasche zu beobachten. Falls du dich zuweit entfernen solltest, wird BagTrack dich per Benachrichtigung warnen, damit du deine Tasche nicht zurücklässt.\n\nUm mit dem Tracking loszulegen, benötigst du die UUID, den Major sowie den Minor-Wert und die Kennung (Identifier) deines iBeacons. Bitte konsultiere die Anleitung deines Geräts oder die Website des Herstellers, um diese Angaben zu bekommen.";
+
+/* Class = "UITextView"; text = "BagTrack utilizes location services for iBeacon tracking.\n\nLocation services are used only in order to determine the proximity between you and your belongings. Your geographic location will never be queried by this app.\n\nPlease tap the “Allow Location” button below and choose “Always Allow” in the following prompt in order to continue."; ObjectID = "nwT-4j-LVu"; */
+"nwT-4j-LVu.text" = "BagTrack verwendet Ortungsdienste für das Tracking deiner iBeacons.\n\nDie Ortungsdienste werden nur dazu genutzt, um die Entfernung zwischen dir und deinen Taschen zu beobachten, dein geographischer Standort wird von dieser App niemals abgefragt.\n\nUm fortzufahren, tippe bitte auf „Ortungsdienste Erlauben“ und wähle dann „Immer Erlauben“ im folgenden Dialog.";
+
+/* Class = "UIButton"; normalTitle = "Allow Location"; ObjectID = "oST-ow-BVd"; */
+"oST-ow-BVd.normalTitle" = "Ortungsdienste Erlauben";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "oVP-LJ-lIk"; */
+"oVP-LJ-lIk.title" = "Weiter";
 
 /* Class = "UITextField"; placeholder = "UUID"; ObjectID = "pCc-Qk-jFa"; */
 "pCc-Qk-jFa.placeholder" = "UUID";

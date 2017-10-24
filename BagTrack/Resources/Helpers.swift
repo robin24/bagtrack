@@ -26,7 +26,7 @@ struct Helpers {
         switch type {
         case .invalidData: alertString = NSLocalizedString("The data you provided is incorrect, please double-check and try again.", comment: "Invalid data error.")
         case .noLocationPermission:
-            alertString = NSLocalizedString("BagTrack needs to access your location in the background in order to function. Please tap on \"Settings\" and set \"Location\" to \"Always\".", comment: "Location access disabled.")
+            alertString = NSLocalizedString("BagTrack needs to access your location in the background in order to function. Please tap on “Settings” and set “Location” to “Always.”", comment: "Location access disabled.")
             hasOKAction = false
             hasSettingsAction = true
         case .noPushPermission:
@@ -40,11 +40,11 @@ struct Helpers {
         case .missingSteps: alertString = NSLocalizedString("Please follow the on-screen instructions before continuing.", comment: "Shown when the user tries to proceed to the next onboarding screen without completing a necessary action.")
         }
         let alert = UIAlertController(title: titleString, message: alertString, preferredStyle: .alert)
-        if hasSettingsAction {
-            alert.addAction(settingsAction)
-        }
         if hasOKAction {
             alert.addAction(okAction)
+        }
+        if hasSettingsAction {
+            alert.addAction(settingsAction)
         }
         return alert
     }

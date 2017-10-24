@@ -63,7 +63,7 @@ extension OnboardingLocationViewController:CLLocationManagerDelegate {
         } else {
             allowButton.setTitle("Settings", for: .normal)
             invalidPermissions = true
-            textView.text = NSLocalizedString("Unfortunately, you have chosen an incorrect location access permission. Please, tap on \"Settings\", and set \"Location\" to \"Always\".", comment: "Shown on onboarding screen when location permissions are incorrect.")
+            textView.text = NSLocalizedString("Unfortunately, you have chosen an incorrect location access permission. Please, tap on “Settings,” and set “Location” to “Always.”", comment: "Shown on onboarding screen when location permissions are incorrect.")
         }
     }
 }

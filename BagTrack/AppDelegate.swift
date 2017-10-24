@@ -84,14 +84,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        guard region is CLBeaconRegion else {
+        guard let region = region as? CLBeaconRegion else {
             return
         }
-        let content = UNMutableNotificationContent()
-        content.title = "BagTrack"
-        content.body = "Oops, you might be about to loose your bag!"
-        content.sound = UNNotificationSound(named: "Alarm.wav")
-        let request = UNNotificationRequest(identifier: "BagTrack", content: content, trigger: nil)
-        center.add(request, withCompletionHandler: nil)
+        for bag in dataModel.bags {
+            if bag == region {
+                let content = UNMutableNotificationContent()
+                content.title = "BagTrack"
+                content.body = NSLocalizedString("Oops, you might be about to loose \(bag.name)!", comment: "Shown as a push notification.")
+                content.sound = UNNotificationSound(named: "Alarm.wav")
+                let request = UNNotificationRequest(identifier: "BagTrack", content: content, trigger: nil)
+                center.add(request, withCompletionHandler: nil)
+            }
+        }
     }
 }
