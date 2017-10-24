@@ -1,15 +1,23 @@
-/* 
-  Localizable.strings
-  BagTrack
+/* Error while monitoring location. */
+"An error has occurred while monitoring location information. \(error.localizedDescription)" = "An error has occurred while monitoring location information. \(error.localizedDescription)";
 
-  Created by Robin Kipp on 06.10.17.
-  Copyright © 2017 Robin Kipp. All rights reserved.
-*/
+/* Push notifications disabled */
+"BagTrack does not currently have the permission to send push notifications and therefore cannot alert you when you might be about to loose your bags. Please enable push notifications in Settings." = "BagTrack does not currently have the permission to send push notifications and therefore cannot alert you when you might be about to loose your bags. Please enable push notifications in Settings.";
+
+/* Location access disabled. */
+"BagTrack needs to access your location in the background in order to function. Please tap on “Settings” and set “Location” to “Always.”" = "BagTrack needs to access your location in the background in order to function. Please tap on “Settings” and set “Location” to “Always.”";
+
+/* Onboarding message informing the user about the app's usage of location services. */
+"BagTrack utilizes location services for iBeacon tracking.\n\nLocation services are used only in order to determine the proximity between you and your belongings. Your geographic location will never be queried by this app.\n\nPlease tap the “Allow Location” button below and choose “Always Allow” in the following prompt in order to continue." = "BagTrack utilizes location services for iBeacon tracking.\n\nLocation services are used only in order to determine the proximity between you and your belongings. Your geographic location will never be queried by this app.\n\nPlease tap the “Allow Location” button below and choose “Always Allow” in the following prompt in order to continue.";
+
+/* Shown to the user at the end of the onboarding process. */
+"Congratulations, you’re all set!\n\nWe hope you enjoy using BagTrack." = "Congratulations, you’re all set!\n\nWe hope you enjoy using BagTrack.";
+
 /* Accessibility action to disable tracking. */
 "Disable Tracking" = "Disable Tracking";
 
-/* Searching after tracking is enabled. */
-"Searching..." = "Searching...";
+/* Window title shown when editing a bag. */
+"Edit Bag" = "Edit Bag";
 
 /* Accessibility action to enable tracking. */
 "Enable Tracking" = "Enable Tracking";
@@ -17,14 +25,57 @@
 /* Shown when tracked bag is at far distance. */
 "Far" = "Far";
 
+/* Onboarding message providing information on how to use BagTrack. */
+"iBeacons are small, portable devices that send out Bluetooth Low Energy signals at regular intervals.\n\nCarrying such a device in your bag will allow BagTrack to automatically monitor the distance between you and your bag, sending you a push notification whenever you might be about to leave your belongings behind.\n\nIn order to start tracking, you will need your iBeacon’s UUID, its major and minor value, and its identifier. Please check your device’s manual or the manufacturer’s website in order to find this information." = "iBeacons are small, portable devices that send out Bluetooth Low Energy signals at regular intervals.\n\nCarrying such a device in your bag will allow BagTrack to automatically monitor the distance between you and your bag, sending you a push notification whenever you might be about to leave your belongings behind.\n\nIn order to start tracking, you will need your iBeacon’s UUID, its major and minor value, and its identifier. Please check your device’s manual or the manufacturer’s website in order to find this information.";
+
 /* Shown when the tracked bag is within immediate range. */
 "Immediate" = "Immediate";
 
 /* Shown when tracked bag is nearby. */
 "Near" = "Near";
 
+/* OK button. */
+"OK" = "OK";
+
+/* Shown when unable to activate notifications. */
+"Oops, something went wrong! We were unable to activate push notifications. Please tap “Settings” now to enable notifications, or tap “Next” if you prefer to do so later." = "Oops, something went wrong! We were unable to activate push notifications. Please tap “Settings” now to enable notifications, or tap “Next” if you prefer to do so later.";
+
+/* Shown as a push notification. */
+"Oops, you might be about to loose \(bag.name)!" = "Oops, you might be about to loose \(bag.name)!";
+
+/* Shown when the user tries to proceed to the next onboarding screen without completing a necessary action. */
+"Please follow the on-screen instructions before continuing." = "Please follow the on-screen instructions before continuing.";
+
+/* Searching after tracking is enabled. */
+"Searching..." = "Searching...";
+
+/* Settings button. */
+"Settings" = "Settings";
+
+/* Shown after location services are enabled. */
+"Thank you for enabling location services!" = "Thank you for enabling location services!";
+
+/* Shown after push notifications were enabled. */
+"Thank you for enabling push notifications!" = "Thank you for enabling push notifications!";
+
+/* Shown when returning to the app from the settings screen. */
+"Thank you!" = "Thank you!";
+
+/* Invalid data error. */
+"The data you provided is incorrect, please double-check and try again." = "The data you provided is incorrect, please double-check and try again.";
+
 /* Shown when tracking is disabled. */
 "Tracking off" = "Tracking off";
 
+/* Shown on onboarding screen when location permissions are incorrect. */
+"Unfortunately, you have chosen an incorrect location access permission. Please, tap on “Settings,” and set “Location” to “Always.”" = "Unfortunately, you have chosen an incorrect location access permission. Please, tap on “Settings,” and set “Location” to “Always.”";
+
 /* Returned when proximity of tracked bag cannot be determined. */
 "Unknown" = "Unknown";
+
+/* Onboarding welcome message. */
+"Welcome to BagTrack!\n\nBagTrack utilizes iBeacon technology to keep track of your bags, luggage, and other belongings. An iBeacon and this app is all that’s required." = "Welcome to BagTrack!\n\nBagTrack utilizes iBeacon technology to keep track of your bags, luggage, and other belongings. An iBeacon and this app is all that’s required.";
+
+/* Onboarding message informing the user about the advantages of enabling push notifications. */
+"When you enable push notifications, BagTrack will inform you when you get too far from your bags.\n\nTap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step." = "When you enable push notifications, BagTrack will inform you when you get too far from your bags.\n\nTap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step.";
+

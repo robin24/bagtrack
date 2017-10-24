@@ -1,30 +1,81 @@
-/* 
-  Localizable.strings
-  BagTrack
+/* Error while monitoring location. */
+"An error has occurred while monitoring location information. \(error.localizedDescription)" = "Beim Abfragen der Ortungsdienste ist ein Fehler aufgetreten. \(error.localizedDescription)";
 
-  Created by Robin Kipp on 06.10.17.
-  Copyright © 2017 Robin Kipp. All rights reserved.
-*/
+/* Push notifications disabled */
+"BagTrack does not currently have the permission to send push notifications and therefore cannot alert you when you might be about to loose your bags. Please enable push notifications in Settings." = "BagTrack kann dir derzeit keine Benachrichtigungen senden und dich somit nicht informieren, wenn du deine Taschen verlieren könntest. Bitte aktiviere Mitteilungen unter Einstellungen.";
+
+/* Location access disabled. */
+"BagTrack needs to access your location in the background in order to function. Please tap on “Settings” and set “Location” to “Always.”" = "BagTrack muss im Hintergrund auf die Ortungsdienste zugreifen, um ordnungsgemäß zu funktionieren. Bitte tippe auf „Einstellungen“ und stelle „Standort“ auf „Immer“.";
+
+/* Onboarding message informing the user about the app's usage of location services. */
+"BagTrack utilizes location services for iBeacon tracking.\n\nLocation services are used only in order to determine the proximity between you and your belongings. Your geographic location will never be queried by this app.\n\nPlease tap the “Allow Location” button below and choose “Always Allow” in the following prompt in order to continue." = "BagTrack verwendet Ortungsdienste für das Tracking deiner iBeacons.\n\nDie Ortungsdienste werden nur dazu genutzt, um die Entfernung zwischen dir und deinen Taschen zu beobachten, dein geographischer Standort wird von dieser App niemals abgefragt.\n\nUm fortzufahren, tippe bitte auf „Ortungsdienste Erlauben“ und wähle dann „Immer erlauben“ im folgenden Dialog.";
+
+/* Shown to the user at the end of the onboarding process. */
+"Congratulations, you’re all set!\n\nWe hope you enjoy using BagTrack." = "Glückwunsch, du bist startklar!\n\nWir hoffen, dass dir BagTrack gefällt.";
+
 /* Accessibility action to disable tracking. */
-"Disable Tracking" = "Tracking Deaktivieren";
+"Disable Tracking" = "Tracking Ausschalten";
+
+/* Window title shown when editing a bag. */
+"Edit Bag" = "Tasche Bearbeiten";
 
 /* Accessibility action to enable tracking. */
-"Enable Tracking" = "Tracking Aktivieren";
-
-/* Searching after tracking is enabled. */
-"Searching..." = "Suchen...";
+"Enable Tracking" = "Tracking Einschalten";
 
 /* Shown when tracked bag is at far distance. */
 "Far" = "Große Entfernung";
 
+/* Onboarding message providing information on how to use BagTrack. */
+"iBeacons are small, portable devices that send out Bluetooth Low Energy signals at regular intervals.\n\nCarrying such a device in your bag will allow BagTrack to automatically monitor the distance between you and your bag, sending you a push notification whenever you might be about to leave your belongings behind.\n\nIn order to start tracking, you will need your iBeacon’s UUID, its major and minor value, and its identifier. Please check your device’s manual or the manufacturer’s website in order to find this information." = "iBeacons sind kleine, portable Geräte, welche in regelmäßigen Intervallen Bluetooth Low Energy-Signale aussenden.\n\nEin solches Gerät in deiner Tasche ermöglicht es BagTrack, die Entfernung zwischen dir und deiner Tasche zu beobachten. Falls du dich zuweit entfernen solltest, wird BagTrack dich per Benachrichtigung warnen, damit du deine Tasche nicht zurücklässt.\n\nUm mit dem Tracking loszulegen, benötigst du die UUID, den Major sowie den Minor-Wert und die Kennung (Identifier) deines iBeacons. Bitte konsultiere die Anleitung deines Geräts oder die Website des Herstellers, um diese Angaben zu bekommen.";
+
 /* Shown when the tracked bag is within immediate range. */
-"Immediate" = "In Unmittelbarer Nähe";
+"Immediate" = "In unmittelbarer Nähe";
 
 /* Shown when tracked bag is nearby. */
 "Near" = "In der Nähe";
 
+/* OK button. */
+"OK" = "OK";
+
+/* Shown when unable to activate notifications. */
+"Oops, something went wrong! We were unable to activate push notifications. Please tap “Settings” now to enable notifications, or tap “Next” if you prefer to do so later." = "Upps, etwas ging schief! Leider konnten wir die Benachrichtigungen nicht aktivieren. Bitte tippe nun auf „Einstellungen“ um Mitteilungen zu aktivieren, oder tippe auf „Weiter“, wenn du dies später erledigen möchtest.";
+
+/* Shown as a push notification. */
+"Oops, you might be about to loose \(bag.name)!" = "Upps, du könntest im Begriff sein, \(bag.name) zu verlieren!";
+
+/* Shown when the user tries to proceed to the next onboarding screen without completing a necessary action. */
+"Please follow the on-screen instructions before continuing." = "Bitte folge den Anweisungen auf dem Display, bevor du fortfährst.";
+
+/* Searching after tracking is enabled. */
+"Searching..." = "Suchen...";
+
+/* Settings button. */
+"Settings" = "Einstellungen";
+
+/* Shown after location services are enabled. */
+"Thank you for enabling location services!" = "Danke, dass du die Standortdienste eingeschaltet hast!";
+
+/* Shown after push notifications were enabled. */
+"Thank you for enabling push notifications!" = "Danke, dass du die Pushbenachrichtigungen eingeschaltet hast!";
+
+/* Shown when returning to the app from the settings screen. */
+"Thank you!" = "Danke!";
+
+/* Invalid data error. */
+"The data you provided is incorrect, please double-check and try again." = "Die eingegebenen Daten sind nicht korrekt. Bitte überprüfe deine Angaben und versuche es dann erneut.";
+
 /* Shown when tracking is disabled. */
 "Tracking off" = "Tracking aus";
 
+/* Shown on onboarding screen when location permissions are incorrect. */
+"Unfortunately, you have chosen an incorrect location access permission. Please, tap on “Settings,” and set “Location” to “Always.”" = "Leider hast du eine falsche Berechtigung für die Ortungsdienste ausgewählt. Bitte tippe auf „Einstellungen“ und stelle „Standort“ auf „Immer“.";
+
 /* Returned when proximity of tracked bag cannot be determined. */
 "Unknown" = "Unbekannt";
+
+/* Onboarding welcome message. */
+"Welcome to BagTrack!\n\nBagTrack utilizes iBeacon technology to keep track of your bags, luggage, and other belongings. An iBeacon and this app is all that’s required." = "Herzlich Willkommen!\n\nBagTrack verwendet iBeacon-Technologie, um deine Taschen, dein Gepäck oder andere Gegenstände im Auge zu behalten. Ein iBeacon und diese App ist alles, was du brauchst.";
+
+/* Onboarding message informing the user about the advantages of enabling push notifications. */
+"When you enable push notifications, BagTrack will inform you when you get too far from your bags.\n\nTap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step." = "Wenn du Pushbenachrichtigungen aktivierst informiert dich BagTrack, sobald du dich zu weit von deinen Taschen entfernst.\n\nTippe auf „Benachrichtigungen erlauben“ und bestätige die folgende Meldung, um Benachrichtigungen zu erhalten (empfohlen), oder tippe auf „Weiter“, um diesen Schritt zu überspringen.";
+
