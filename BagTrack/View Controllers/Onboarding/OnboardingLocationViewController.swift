@@ -28,6 +28,7 @@ class OnboardingLocationViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.text = NSLocalizedString("BagTrack utilizes location services for iBeacon tracking.\n\nLocation services are used only in order to determine the proximity between you and your belongings. Your geographic location will never be queried by this app.\n\nPlease tap the “Allow Location” button below and choose “Always Allow” in the following prompt in order to continue.", comment: "Onboarding message informing the user about the app's usage of location services.")
         manager = CLLocationManager()
         manager.delegate = self
     }
@@ -61,7 +62,7 @@ extension OnboardingLocationViewController:CLLocationManagerDelegate {
             UserDefaults.standard.set(true, forKey: "canContinue")
             textView.text = NSLocalizedString("Thank you for enabling location services!", comment: "Shown after location services are enabled.")
         } else {
-            allowButton.setTitle("Settings", for: .normal)
+            allowButton.setTitle(NSLocalizedString("Settings", comment: "Settings button."), for: .normal)
             invalidPermissions = true
             textView.text = NSLocalizedString("Unfortunately, you have chosen an incorrect location access permission. Please, tap on “Settings,” and set “Location” to “Always.”", comment: "Shown on onboarding screen when location permissions are incorrect.")
         }

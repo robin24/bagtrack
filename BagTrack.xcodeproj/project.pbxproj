@@ -10,6 +10,8 @@
 		000463E01F8BD24600DF709F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000463DF1F8BD24600DF709F /* Helpers.swift */; };
 		001033F21F91127D00A5072B /* OnboardingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001033F11F91127D00A5072B /* OnboardingLocationViewController.swift */; };
 		00110A361F81475F00247EBC /* Alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 00110A351F81475F00247EBC /* Alarm.wav */; };
+		0012300B1F9F977D008CCB68 /* OnboardingWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012300A1F9F977D008CCB68 /* OnboardingWelcomeViewController.swift */; };
+		0012300D1F9F9A79008CCB68 /* OnboardingTechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012300C1F9F9A79008CCB68 /* OnboardingTechViewController.swift */; };
 		002F31001F6B166F003E5133 /* BagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F30FF1F6B166F003E5133 /* BagsTableViewController.swift */; };
 		002F31021F6B1856003E5133 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31011F6B1856003E5133 /* Bag.swift */; };
 		002F31041F6B2D3E003E5133 /* BagDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */; };
@@ -21,12 +23,15 @@
 		00AEE4D31F6ADC6900B10697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE4D11F6ADC6900B10697 /* Main.storyboard */; };
 		00AEE4D51F6ADC6900B10697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE4D41F6ADC6900B10697 /* Assets.xcassets */; };
 		00EA38541F730E9A00CDA981 /* BagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA38531F730E9A00CDA981 /* BagCell.swift */; };
+		00FED6C11F9FA00C007A65A1 /* OnboardingReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED6C01F9FA00C007A65A1 /* OnboardingReadyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000463DF1F8BD24600DF709F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		001033F11F91127D00A5072B /* OnboardingLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLocationViewController.swift; sourceTree = "<group>"; };
 		00110A351F81475F00247EBC /* Alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Alarm.wav; sourceTree = "<group>"; };
+		0012300A1F9F977D008CCB68 /* OnboardingWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWelcomeViewController.swift; sourceTree = "<group>"; };
+		0012300C1F9F9A79008CCB68 /* OnboardingTechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTechViewController.swift; sourceTree = "<group>"; };
 		002F30FF1F6B166F003E5133 /* BagsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsTableViewController.swift; sourceTree = "<group>"; };
 		002F31011F6B1856003E5133 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		00AEE4D41F6ADC6900B10697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00AEE4D91F6ADC6900B10697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00EA38531F730E9A00CDA981 /* BagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagCell.swift; sourceTree = "<group>"; };
+		00FED6C01F9FA00C007A65A1 /* OnboardingReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingReadyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001230091F9F9090008CCB68 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0012300A1F9F977D008CCB68 /* OnboardingWelcomeViewController.swift */,
+				0012300C1F9F9A79008CCB68 /* OnboardingTechViewController.swift */,
+				001033F11F91127D00A5072B /* OnboardingLocationViewController.swift */,
+				004B22371F91605300B16633 /* OnboardingPushViewController.swift */,
+				00FED6C01F9FA00C007A65A1 /* OnboardingReadyViewController.swift */,
+				0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		0030CFBA1F7033B200E021E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +89,7 @@
 				002F30FF1F6B166F003E5133 /* BagsTableViewController.swift */,
 				00EA38531F730E9A00CDA981 /* BagCell.swift */,
 				002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */,
-				001033F11F91127D00A5072B /* OnboardingLocationViewController.swift */,
-				004B22371F91605300B16633 /* OnboardingPushViewController.swift */,
-				0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */,
+				001230091F9F9090008CCB68 /* Onboarding */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -197,10 +214,13 @@
 				0045FC051F8FBF77002EEB15 /* OnboardingPager.swift in Sources */,
 				002F31061F6B3479003E5133 /* DataModel.swift in Sources */,
 				002F31001F6B166F003E5133 /* BagsTableViewController.swift in Sources */,
+				0012300B1F9F977D008CCB68 /* OnboardingWelcomeViewController.swift in Sources */,
 				002F31041F6B2D3E003E5133 /* BagDetailTableViewController.swift in Sources */,
 				002F31021F6B1856003E5133 /* Bag.swift in Sources */,
 				00AEE4CE1F6ADC6800B10697 /* AppDelegate.swift in Sources */,
 				004B22381F91605300B16633 /* OnboardingPushViewController.swift in Sources */,
+				0012300D1F9F9A79008CCB68 /* OnboardingTechViewController.swift in Sources */,
+				00FED6C11F9FA00C007A65A1 /* OnboardingReadyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

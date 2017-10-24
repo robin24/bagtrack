@@ -22,6 +22,7 @@ class OnboardingPushViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.text = NSLocalizedString("When you enable push notifications, BagTrack will inform you when you get too far from your bags.\n\nTap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step.", comment: "Onboarding message informing the user about the advantages of enabling push notifications.")
         center = UNUserNotificationCenter.current()
     }
 
@@ -52,7 +53,7 @@ class OnboardingPushViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.textView.text = NSLocalizedString("Oops, something went wrong! We were unable to activate push notifications. Please tap “Settings” now to enable notifications, or tap “Next” if you prefer to do so later.", comment: "Shown when unable to activate notifications.")
                     self.pushActivationFailed = true
-                    self.allowButton.setTitle("Settings", for: .normal)
+                    self.allowButton.setTitle(NSLocalizedString("Settings", comment: "Settings button."), for: .normal)
                 }
             } }
     }
