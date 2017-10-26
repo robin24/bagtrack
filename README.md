@@ -59,3 +59,8 @@ Please check your device's manual or the manufacturer's website. In many cases, 
 
 Unfortunately, this is due to a limitation in Apple's frameworks.
 While the CoreBluetooth framework technically allows us to search for nearby Bluetooth devices, the device's UUID must be known before starting the auto-discovery process. Since iBeacon devices come with different, arbitrary UUIDs, it is therefore not possible to search for iBeacons automatically. For more information, take a look at [this Stack Overflow question](https://stackoverflow.com/questions/18784285/search-for-all-ibeacons-and-not-just-with-specific-uuid).
+
+## Support
+
+Have questions?
+Post to our [Groups.io group](https://groups.io/g/bagtrack-users)
