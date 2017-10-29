@@ -1,6 +1,6 @@
 # BagTrack
 
-<img src="AppIcon-256.png" alt="App Icon" width=128 />
+<img src="AppIcon-256.png" alt="App Icon" width="128px">
 
 BagTrack is a lightweight iOS app written entirely in Swift. It allows users to track bags, suitcases and other belongings using Bluetooth iBeacons.
 
