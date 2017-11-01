@@ -28,22 +28,32 @@ You can use any iBeacon device with BagTrack, as long as it conforms to Apple's 
 
 ## Prerequisites
 
-In order to compile and use BagTrack, you need the following:
-* Xcode 9.0 or later
-* A physical device running iOS 11.0 or later (the app will not properly run in Simulator due to its use of Bluetooth)
+In order to use BagTrack, you need the following:
 * An iBeacon device
+* A physical device running iOS 11.0 or later (the app will not properly run in Xcode Simulator due to its use of Bluetooth)
+* Xcode 9.0 or later (only if you want to compile it yourself or update the source code)
 
-## Usage
+## Installation
+
+### App Store Download
+
+The latest shipping release of BagTrack is available on the iOS App Store for easy installation and use.
+[View BagTrack on the App Store](https://itunes.apple.com/us/app/bagtrack/id1301407968?l=de&ls=1&mt=8)
+
+### Compiling from Source
 
 1. Clone this repository.
 `git clone https://github.com/robin24/bagtrack.git`
 2. Open BagTrack.xcodeproj in Xcode 9.0 or later
 3. Compile and run BagTrack
-4. Follow the instructions presented when opening the app
-5. Add a new bag by tapping the "Add" button on the main screen
-6. Provide a name, your iBeacon's UUID, major and minor values as well as its identifier, then tap "Save".
-7. Keep your iBeacon in your bag or other luggage, BagTrack will indicate the approximate distance between you and your belongings while it is open, or send you a push notification when you get too far away while the app is in the background.
-8. Enjoy!
+
+## Usage
+
+1. Follow the instructions presented when opening the app
+2. Add a new bag by tapping the "Add" button on the main screen
+3. Provide a name, your iBeacon's UUID, major and minor values as well as its identifier, then tap "Save".
+4. Keep your iBeacon in your bag or other luggage, BagTrack will indicate the approximate distance between you and your belongings while it is open, or send you a push notification when you get too far away while the app is in the background.
+5. Enjoy!
 
 ## FAQ
 
