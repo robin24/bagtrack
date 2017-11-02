@@ -132,6 +132,8 @@ extension BagsTableViewController:BagDetailDelegate {
         tableView.endUpdates()
     }
     func bagDetailController(_ controller: BagDetailTableViewController, didFinishEditing bag: Bag, at indexPath: IndexPath) {
+        bag.isTrackingEnabled = dataModel.bags[indexPath.row].isTrackingEnabled
+        bag.proximity = dataModel.bags[indexPath.row].proximity
         dataModel.bags.remove(at: indexPath.row)
         dataModel.bags.insert(bag, at: indexPath.row)
         let cell = tableView.cellForRow(at: indexPath) as! BagCell
