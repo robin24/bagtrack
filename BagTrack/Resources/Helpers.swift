@@ -13,7 +13,7 @@ struct Helpers {
         case invalidData, noLocationPermission, noPushPermission, locationError, missingSteps
     }
     static func showAlert(_ type:alertTypes, error:Error?) -> UIAlertController {
-        let titleString = "Error"
+        let titleString = NSLocalizedString("Error", comment: "Error dialog title.")
         var alertString = ""
         let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: "OK button."), style: .default, handler: nil)
         let settingsAction = UIAlertAction(title: NSLocalizedString("Settings", comment: "Settings button."), style: .default) { _ in

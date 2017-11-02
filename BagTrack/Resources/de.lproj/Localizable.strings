@@ -37,6 +37,12 @@
 /* OK button. */
 "OK" = "OK";
 
+/* Done button. */
+"Done" = "Fertig";
+
+/* Next button. */
+"Next" = "Weiter";
+
 /* Shown when unable to activate notifications. */
 "Oops, something went wrong! We were unable to activate push notifications. Please tap “Settings” now to enable notifications, or tap “Next” if you prefer to do so later." = "Upps, etwas ging schief! Leider konnten wir die Benachrichtigungen nicht aktivieren. Bitte tippe nun auf „Einstellungen“ um Mitteilungen zu aktivieren, oder tippe auf „Weiter“, wenn du dies später erledigen möchtest.";
 
@@ -79,3 +85,5 @@
 /* Onboarding message informing the user about the advantages of enabling push notifications. */
 "When you enable push notifications, BagTrack will inform you when you get too far from your bags.\n\nTap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step." = "Wenn du Pushbenachrichtigungen aktivierst informiert dich BagTrack, sobald du dich zu weit von deinen Taschen entfernst.\n\nTippe auf „Benachrichtigungen erlauben“ und bestätige die folgende Meldung, um Benachrichtigungen zu erhalten (empfohlen), oder tippe auf „Weiter“, um diesen Schritt zu überspringen.";
 
+/* Error dialog title. */
+"Error" = "Fehler";

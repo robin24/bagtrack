@@ -34,7 +34,7 @@ class OnboardingPager: UIPageViewController {
         counter -= 1
         setViewControllers([controllers[counter]], direction: .reverse, animated: true, completion: nil)
         UserDefaults.standard.set(true, forKey: "canContinue")
-        nextButton.title = "Next"
+        nextButton.title = NSLocalizedString("Next", comment: "Next button.")
         if counter == 0 {
             backButton.isEnabled = false
         }
@@ -49,7 +49,7 @@ class OnboardingPager: UIPageViewController {
             setViewControllers([controllers[counter]], direction: .forward, animated: true, completion: nil)
             backButton.isEnabled = true
             if counter + 1 == controllers.count {
-                nextButton.title = "Done"
+                nextButton.title = NSLocalizedString("Done", comment: "Done button.")
             }
         } else {
             UserDefaults.standard.set(true, forKey: "hasCompletedOnboarding")
