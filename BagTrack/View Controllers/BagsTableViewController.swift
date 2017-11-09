@@ -166,13 +166,16 @@ extension BagsTableViewController:CLLocationManagerDelegate {
             let bag = dataModel.bags[index]
             for beacon in beacons {
                 if bag == beacon {
-                    print("Ranged beacon matches stored bag.")
+                    if bag.proximity == beacon.proximity {
+                        return
+                    }
                     bag.proximity = beacon.proximity
                     let indexPath = IndexPath(row: index, section: 0)
                     guard let cell = tableView.cellForRow(at: indexPath) as? BagCell else {
                         fatalError("No cell at requested IndexPath.")
                     }
                     cell.proximityLabel.text = bag.proximityForDisplay()
+                    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, bag.proximityForDisplay() as NSString)
                 }
             }
         }

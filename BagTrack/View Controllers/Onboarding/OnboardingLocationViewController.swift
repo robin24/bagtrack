@@ -29,6 +29,7 @@ class OnboardingLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = NSLocalizedString("BagTrack utilizes location services for iBeacon tracking.\n\nLocation services are used only in order to determine the proximity between you and your belongings. Your geographic location will never be queried by this app.\n\nPlease tap the “Allow Location” button below and choose “Always Allow” in the following prompt in order to continue.", comment: "Onboarding message informing the user about the app's usage of location services.")
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, textView)
         manager = CLLocationManager()
         manager.delegate = self
     }

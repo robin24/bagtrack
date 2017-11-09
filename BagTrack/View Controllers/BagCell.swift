@@ -42,6 +42,7 @@ class BagCell: UITableViewCell {
         nameLabel.text = bag.name
         proximityLabel.text = bag.proximityForDisplay()
         trackingSwitch.isOn = bag.isTrackingEnabled
+            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, bag.proximityForDisplay() as NSString)
         trackingSwitch.isAccessibilityElement = false
         trackingLabel.isAccessibilityElement = false
         if trackingSwitch.isOn {

@@ -19,6 +19,7 @@ class OnboardingReadyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = NSLocalizedString("Congratulations, you’re all set!\n\nWe hope you enjoy using BagTrack.", comment: "Shown to the user at the end of the onboarding process.")
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, textView)
     }
 
     override func didReceiveMemoryWarning() {

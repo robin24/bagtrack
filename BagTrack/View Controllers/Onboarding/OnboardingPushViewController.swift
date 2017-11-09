@@ -23,6 +23,7 @@ class OnboardingPushViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = NSLocalizedString("When you enable push notifications, BagTrack will inform you when you get too far from your bags.\n\nTap “Allow Push Notifications” and confirm the following prompt to enable notifications (recommended), or tap “Next” in order to skip this step.", comment: "Onboarding message informing the user about the advantages of enabling push notifications.")
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, textView)
         center = UNUserNotificationCenter.current()
     }
 
