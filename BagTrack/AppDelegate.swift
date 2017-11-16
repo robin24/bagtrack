@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager = CLLocationManager()
         manager.delegate = self
         center = UNUserNotificationCenter.current()
+        if let navController = window?.rootViewController as? UINavigationController {
+            guard let viewController = navController.topViewController as? BagsTableViewController else {
+                fatalError("Found an incorrect view controller, unable to inject LocationManager.")
+            }
+            viewController.manager = CLLocationManager()
+        }
         return true
     }
 
