@@ -48,6 +48,8 @@ class BagsTableViewControllerTests: XCTestCase {
         XCTAssertEqual(bag.proximityForDisplay(), "Near")
         bag.proximity = .far
         XCTAssertEqual(bag.proximityForDisplay(), "Far")
+        bag.isTrackingEnabled = false
+        XCTAssertEqual(bag.proximityForDisplay(), "Tracking off")
     }
 
     func testDataModel() {
