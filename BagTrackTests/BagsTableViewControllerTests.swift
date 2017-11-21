@@ -12,30 +12,14 @@ import CoreLocation
 
 class BagsTableViewControllerTests: XCTestCase {
 
-    var bundle:Bundle!
-    var storyboard:UIStoryboard!
-    var subject:BagsTableViewController!
-    var bag:Bag!
-    var dataModel:DataModel!
+    let bag = Bag(name: "Test Bag", proximityUUID: UUID(uuidString: "39EF51FA-F162-4A11-8DF4-F636D20679F8")!, majorValue: CLBeaconMajorValue(1), minorValue: CLBeaconMinorValue(1), beaconID: "TestBag123")
+    let dataModel = DataModel.sharedInstance
 
     override func setUp() {
         super.setUp()
-        bundle = Bundle(for: BagsTableViewController.self)
-        storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        subject = storyboard.instantiateViewController(withIdentifier: "MyBags") as! BagsTableViewController
-        let testUUID = UUID(uuidString: "39EF51FA-F162-4A11-8DF4-F636D20679F8")!
-        let major = CLBeaconMajorValue(1)
-        let minor = CLBeaconMinorValue(1)
-        bag = Bag(name: "Test Bag", proximityUUID: testUUID, majorValue: major, minorValue: minor, beaconID: "TestBag123")
-        dataModel = DataModel.sharedInstance
     }
 
     override func tearDown() {
-        subject = nil
-        storyboard = nil
-        bundle = nil
-        bag = nil
-        dataModel = nil
         super.tearDown()
     }
 
@@ -65,12 +49,4 @@ class BagsTableViewControllerTests: XCTestCase {
         XCTAssertEqual(bagsFromDisk.count, 0)
     }
 
-    func testTracking() {
-        XCTAssertNotNil(subject)
-        XCTAssertNotNil(subject.view)
-        subject.dataModel.bags.append(bag)
-        XCTAssertEqual(subject.dataModel.bags.count, 1)
-    }
-    
-    
 }
