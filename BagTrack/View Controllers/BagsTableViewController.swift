@@ -175,7 +175,9 @@ extension BagsTableViewController:CLLocationManagerDelegate {
                         fatalError("No cell at requested IndexPath.")
                     }
                     cell.proximityLabel.text = bag.proximityForDisplay()
-                    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, bag.proximityForDisplay() as NSString)
+                    if cell.accessibilityElementIsFocused() {
+                        UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, bag.proximityForDisplay() as NSString)
+                    }
                 }
             }
         }
