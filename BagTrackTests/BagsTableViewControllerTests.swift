@@ -24,6 +24,7 @@ class BagsTableViewControllerTests: XCTestCase {
     }
 
     func testBagStates() {
+        XCTAssertEqual(Locale.current.identifier, "en_US")
         XCTAssertNotNil(bag)
         XCTAssertEqual(bag.proximity, .unknown)
         bag.proximity = .immediate
