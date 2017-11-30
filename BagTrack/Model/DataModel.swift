@@ -35,7 +35,7 @@ class DataModel {
             print("Error writing data to disk: \(error)")
         }
     }
-    private func loadBags() -> [Bag] {
+    func loadBags() -> [Bag] {
         print("Loading bags...")
         let filePath = getFilePath()
         guard let data = try? Data.init(contentsOf: filePath) else {

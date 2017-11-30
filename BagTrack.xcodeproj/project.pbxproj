@@ -16,6 +16,7 @@
 		002F31021F6B1856003E5133 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31011F6B1856003E5133 /* Bag.swift */; };
 		002F31041F6B2D3E003E5133 /* BagDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */; };
 		002F31061F6B3479003E5133 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002F31051F6B3479003E5133 /* DataModel.swift */; };
+		00334CC71FBDCB86000AE100 /* BagsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00334CC61FBDCB86000AE100 /* BagsTableViewControllerTests.swift */; };
 		0045FC051F8FBF77002EEB15 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */; };
 		004B22381F91605300B16633 /* OnboardingPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B22371F91605300B16633 /* OnboardingPushViewController.swift */; };
 		008A01651F87F051007A1E7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 008A01671F87F051007A1E7E /* Localizable.strings */; };
@@ -25,6 +26,16 @@
 		00EA38541F730E9A00CDA981 /* BagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA38531F730E9A00CDA981 /* BagCell.swift */; };
 		00FED6C11F9FA00C007A65A1 /* OnboardingReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED6C01F9FA00C007A65A1 /* OnboardingReadyViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00334CC91FBDCB86000AE100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEE4C21F6ADC6800B10697 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00AEE4C91F6ADC6800B10697;
+			remoteInfo = BagTrack;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		000463DF1F8BD24600DF709F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -36,6 +47,9 @@
 		002F31011F6B1856003E5133 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		002F31031F6B2D3E003E5133 /* BagDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDetailTableViewController.swift; sourceTree = "<group>"; };
 		002F31051F6B3479003E5133 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		00334CC41FBDCB86000AE100 /* BagTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BagTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00334CC61FBDCB86000AE100 /* BagsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsTableViewControllerTests.swift; sourceTree = "<group>"; };
+		00334CC81FBDCB86000AE100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003A75C41F9A8A5A00C95064 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		004B22371F91605300B16633 /* OnboardingPushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPushViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		00334CC11FBDCB86000AE100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00AEE4C71F6ADC6800B10697 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,10 +128,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		00334CC51FBDCB86000AE100 /* BagTrackTests */ = {
+			isa = PBXGroup;
+			children = (
+				00334CC61FBDCB86000AE100 /* BagsTableViewControllerTests.swift */,
+				00334CC81FBDCB86000AE100 /* Info.plist */,
+			);
+			path = BagTrackTests;
+			sourceTree = "<group>";
+		};
 		00AEE4C11F6ADC6800B10697 = {
 			isa = PBXGroup;
 			children = (
 				00AEE4CC1F6ADC6800B10697 /* BagTrack */,
+				00334CC51FBDCB86000AE100 /* BagTrackTests */,
 				00AEE4CB1F6ADC6800B10697 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				00AEE4CA1F6ADC6800B10697 /* BagTrack.app */,
+				00334CC41FBDCB86000AE100 /* BagTrackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +169,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00334CC31FBDCB86000AE100 /* BagTrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00334CCD1FBDCB86000AE100 /* Build configuration list for PBXNativeTarget "BagTrackTests" */;
+			buildPhases = (
+				00334CC01FBDCB86000AE100 /* Sources */,
+				00334CC11FBDCB86000AE100 /* Frameworks */,
+				00334CC21FBDCB86000AE100 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00334CCA1FBDCB86000AE100 /* PBXTargetDependency */,
+			);
+			name = BagTrackTests;
+			productName = BagTrackTests;
+			productReference = 00334CC41FBDCB86000AE100 /* BagTrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		00AEE4C91F6ADC6800B10697 /* BagTrack */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00AEE4DC1F6ADC6900B10697 /* Build configuration list for PBXNativeTarget "BagTrack" */;
@@ -160,10 +210,15 @@
 		00AEE4C21F6ADC6800B10697 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Robin Kipp";
 				TargetAttributes = {
+					00334CC31FBDCB86000AE100 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 00AEE4C91F6ADC6800B10697;
+					};
 					00AEE4C91F6ADC6800B10697 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -190,11 +245,19 @@
 			projectRoot = "";
 			targets = (
 				00AEE4C91F6ADC6800B10697 /* BagTrack */,
+				00334CC31FBDCB86000AE100 /* BagTrackTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00334CC21FBDCB86000AE100 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00AEE4C81F6ADC6800B10697 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +272,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00334CC01FBDCB86000AE100 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00334CC71FBDCB86000AE100 /* BagsTableViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00AEE4C61F6ADC6800B10697 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +301,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00334CCA1FBDCB86000AE100 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00AEE4C91F6ADC6800B10697 /* BagTrack */;
+			targetProxy = 00334CC91FBDCB86000AE100 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		008A01671F87F051007A1E7E /* Localizable.strings */ = {
@@ -253,6 +332,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		00334CCB1FBDCB86000AE100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7N26279M7;
+				INFOPLIST_FILE = BagTrackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.robin-kipp.BagTrackTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BagTrack.app/BagTrack";
+			};
+			name = Debug;
+		};
+		00334CCC1FBDCB86000AE100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7N26279M7;
+				INFOPLIST_FILE = BagTrackTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.robin-kipp.BagTrackTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BagTrack.app/BagTrack";
+			};
+			name = Release;
+		};
 		00AEE4DA1F6ADC6900B10697 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +508,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00334CCD1FBDCB86000AE100 /* Build configuration list for PBXNativeTarget "BagTrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00334CCB1FBDCB86000AE100 /* Debug */,
+				00334CCC1FBDCB86000AE100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00AEE4C51F6ADC6800B10697 /* Build configuration list for PBXProject "BagTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
