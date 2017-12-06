@@ -19,7 +19,6 @@ class BagCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var proximityLabel: UILabel!
     @IBOutlet weak var trackingSwitch: UISwitch!
-    @IBOutlet weak var trackingLabel:UILabel!
     weak var delegate:BagCellDelegate?
     var bag:Bag! {
         didSet {
@@ -44,7 +43,6 @@ class BagCell: UITableViewCell {
         trackingSwitch.isOn = bag.isTrackingEnabled
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, bag.proximityForDisplay() as NSString)
         trackingSwitch.isAccessibilityElement = false
-        trackingLabel.isAccessibilityElement = false
         if trackingSwitch.isOn {
             let action = UIAccessibilityCustomAction(name: NSLocalizedString("Disable Tracking", comment: "Accessibility action to disable tracking."), target: self, selector: #selector(toggleSwitchAccessibilityAction(_:)))
             self.accessibilityCustomActions = [action]
@@ -53,7 +51,8 @@ class BagCell: UITableViewCell {
             self.accessibilityCustomActions = [action]
         }
     }
-    @IBAction func onTrackingSwitchToggled(_ sender: Any) {
+    @IBAction func onTrackingSwitchToggled(_ sender: UISwitch) {
+        print("Tracking switch toggled.")
         delegate?.bagCell(self, didToggleTrackingFor: bag)
     }
     @objc func toggleSwitchAccessibilityAction(_ sender:Any) {
