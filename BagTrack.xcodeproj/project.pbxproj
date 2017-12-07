@@ -20,6 +20,7 @@
 		0045FC051F8FBF77002EEB15 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */; };
 		004B22381F91605300B16633 /* OnboardingPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B22371F91605300B16633 /* OnboardingPushViewController.swift */; };
 		0063CAAE1FD956080035DD7F /* Beacon-UUIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0063CAAD1FD956080035DD7F /* Beacon-UUIDs.plist */; };
+		0063CAB01FD983130035DD7F /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0063CAAF1FD983130035DD7F /* Vendor.swift */; };
 		008A01651F87F051007A1E7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 008A01671F87F051007A1E7E /* Localizable.strings */; };
 		00AEE4CE1F6ADC6800B10697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE4CD1F6ADC6800B10697 /* AppDelegate.swift */; };
 		00AEE4D31F6ADC6900B10697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE4D11F6ADC6900B10697 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		004B22371F91605300B16633 /* OnboardingPushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPushViewController.swift; sourceTree = "<group>"; };
 		0063CAAD1FD956080035DD7F /* Beacon-UUIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beacon-UUIDs.plist"; sourceTree = "<group>"; };
+		0063CAAF1FD983130035DD7F /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		008A01661F87F051007A1E7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		008A01681F87F0BC007A1E7E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00AEE4CA1F6ADC6800B10697 /* BagTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 			children = (
 				002F31011F6B1856003E5133 /* Bag.swift */,
 				002F31051F6B3479003E5133 /* DataModel.swift */,
+				0063CAAF1FD983130035DD7F /* Vendor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00EA38541F730E9A00CDA981 /* BagCell.swift in Sources */,
+				0063CAB01FD983130035DD7F /* Vendor.swift in Sources */,
 				001033F21F91127D00A5072B /* OnboardingLocationViewController.swift in Sources */,
 				000463E01F8BD24600DF709F /* Helpers.swift in Sources */,
 				0045FC051F8FBF77002EEB15 /* OnboardingPager.swift in Sources */,

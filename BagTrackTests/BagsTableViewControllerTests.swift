@@ -48,6 +48,8 @@ class BagsTableViewControllerTests: XCTestCase {
         dataModel.saveToDisk()
         bagsFromDisk = dataModel.loadBags()
         XCTAssertEqual(bagsFromDisk.count, 0)
+        let vendors = dataModel.loadVendors()
+        XCTAssertNotNil(vendors)
     }
 
 }
