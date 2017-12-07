@@ -19,6 +19,7 @@
 		00334CC71FBDCB86000AE100 /* BagsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00334CC61FBDCB86000AE100 /* BagsTableViewControllerTests.swift */; };
 		0045FC051F8FBF77002EEB15 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */; };
 		004B22381F91605300B16633 /* OnboardingPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B22371F91605300B16633 /* OnboardingPushViewController.swift */; };
+		0063CAAE1FD956080035DD7F /* Beacon-UUIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0063CAAD1FD956080035DD7F /* Beacon-UUIDs.plist */; };
 		008A01651F87F051007A1E7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 008A01671F87F051007A1E7E /* Localizable.strings */; };
 		00AEE4CE1F6ADC6800B10697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AEE4CD1F6ADC6800B10697 /* AppDelegate.swift */; };
 		00AEE4D31F6ADC6900B10697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AEE4D11F6ADC6900B10697 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		003A75C41F9A8A5A00C95064 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		0045FC041F8FBF77002EEB15 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		004B22371F91605300B16633 /* OnboardingPushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPushViewController.swift; sourceTree = "<group>"; };
+		0063CAAD1FD956080035DD7F /* Beacon-UUIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beacon-UUIDs.plist"; sourceTree = "<group>"; };
 		008A01661F87F051007A1E7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		008A01681F87F0BC007A1E7E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00AEE4CA1F6ADC6800B10697 /* BagTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 			children = (
 				00AEE4D11F6ADC6900B10697 /* Main.storyboard */,
 				000463DF1F8BD24600DF709F /* Helpers.swift */,
+				0063CAAD1FD956080035DD7F /* Beacon-UUIDs.plist */,
 				00110A351F81475F00247EBC /* Alarm.wav */,
 				00AEE4D41F6ADC6900B10697 /* Assets.xcassets */,
 				00AEE4D91F6ADC6900B10697 /* Info.plist */,
@@ -266,6 +269,7 @@
 				00AEE4D51F6ADC6900B10697 /* Assets.xcassets in Resources */,
 				00110A361F81475F00247EBC /* Alarm.wav in Resources */,
 				00AEE4D31F6ADC6900B10697 /* Main.storyboard in Resources */,
+				0063CAAE1FD956080035DD7F /* Beacon-UUIDs.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

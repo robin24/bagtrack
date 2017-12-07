@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Generic</key>
+	<dict>
+		<key>vendor</key>
+		<string>Generic Beacon</string>
+		<key>uuid</key>
+		<string>74278BDA-B644-4520-8F0C-720EAF059935</string>
+	</dict>
+	<key>AirLocate</key>
+	<dict>
+		<key>vendor</key>
+		<string>AirLocate</string>
+		<key>uuid</key>
+		<string>E2C56DB5-DFFB-48D2-B060-D0F5A71096E0</string>
+	</dict>
+	<key>Estimote</key>
+	<dict>
+		<key>vendor</key>
+		<string>Estimote</string>
+		<key>uuid</key>
+		<string>B9407F30-F5F8-466E-AFF9-25556B57FE6D</string>
+	</dict>
+	<key>WeChat 0</key>
+	<dict>
+		<key>vendor</key>
+		<string>Wechat</string>
+		<key>uuid</key>
+		<string>FDA50693-A4E2-4FB1-AFCF-C6EB07647825</string>
+	</dict>
+	<key>WeChat 1</key>
+	<dict>
+		<key>vendor</key>
+		<string>WeChat</string>
+		<key>uuid</key>
+		<string>AB8190D5-D11E-4941-ACC4-42F30510B408</string>
+	</dict>
+</dict>
+</plist>
